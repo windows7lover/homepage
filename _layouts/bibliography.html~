@@ -15,12 +15,12 @@
 
 	
 		{% if entry.abstractfile %}
-			<a data-toggle="collapse" data-target="#{{key}}-abstractfile">[Abstract]</a>&nbsp;
+			<a data-toggle="collapse" data-target="#{{key}}-abstract">[Abstract]</a>&nbsp;
 		{% endif %}
 
 
-		{% if entry.bibtexfile %}
-			<a data-toggle="collapse" data-target="#{{key}}-bibtexfile">[bibtex]</a>&nbsp;
+		{% if entry.bibtex %}
+			<a data-toggle="collapse" data-target="#{{key}}-bibtex">[bibtex]</a>&nbsp;
 		{% endif %}
 
     {% if entry.paperpdf %}
@@ -30,26 +30,19 @@
 
 		
 		{% if entry.abstractfile %}
-			<div id="{{key}}-abstractfile" class="collapse">
+			<div id="{{key}}-abstract" class="collapse">
 				{{entry.abstractfile}}
 				test
 			</div>
 		{% endif %}
 
 		
-		{% if entry.bibtexfile %}
-			<div id="{{key}}-bibtexfile" class="collapse">
+		{% if entry.bibtex %}
+			<div id="{{key}}-bibtex" class="collapse">
 <div markdown="1">
 {% highlight bibtex %}
-@inproceedings{scieur2016regularized,
-  title={Regularized Nonlinear Acceleration},
-  author={Scieur, Damien and d'Aspremont, Alexandre and Bach, Francis},
-  booktitle={Advances In Neural Information Processing Systems},
-  pages={712--720},
-  year={2016}
-}
+{{ site.mainbibfile | find_bib_entry: entry.key }}
 {% endhighlight %}
-$ tesr $
 </div>
 			</div>
 		{% endif %}
