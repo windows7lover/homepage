@@ -1,0 +1,37 @@
+---
+---
+
+{{reference}}
+
+<style>
+  .vspace20px {
+     margin-bottom: 20px;
+  }
+</style>
+
+<div id="{{key}}-materials">
+	
+  <div class="nav nav-pills">
+    {% if entry.abstract %}
+    <a data-toggle="collapse" href="#{{key}}-abstract">Abstract</a>
+    {% endif %}
+
+    {% if entry.paperbibtex %}
+    <a href="{{entry.paperbibtex}}">[bib]</a>&nbsp;
+    {% endif %}
+
+    {% if entry.paperpdf %}
+    <a href="{{ site.url }}/pdf/{{entry.paperpdf}}">[PDF]</a>&nbsp;
+    {% endif %}
+	
+		{% if entry.abstract %}
+		<p id="{{key}}-abstract" class="collapse">{{entry.abstract}}</p>
+		{% endif %}
+  </div>
+	<p class="vspace20px">
+	</p>
+	<!--
+  <pre id="{{key}}-bibtex" class="pre pre-scrollable collapse">{{entry.bibtex}}</pre>
+	-->
+</div>
+
