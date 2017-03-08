@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only">
-  <!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
   <info>
     <title>Harvard Reference format 1 (author-date)</title>
-    <id>http://www.zotero.org/styles/harvard-reference-format-1</id>
-    <link href="http://www.zotero.org/styles/harvard-reference-format-1" rel="self"/>
+    <id>http://www.zotero.org/styles/harvard1</id>
+    <link href="http://www.zotero.org/styles/harvard1" rel="self"/>
     <link href="http://libweb.anglia.ac.uk/referencing/harvard.htm" rel="documentation"/>
     <author>
       <name>Julian Onions</name>
@@ -13,7 +12,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>The Harvard author-date style</summary>
-    <updated>2017-03-08T18:39:34+00:00</updated>
+    <updated>2014-09-10T06:18:55+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <macro name="editor">
@@ -67,7 +66,7 @@
         <text variable="title" font-style="italic"/>
       </if>
       <else>
-        <text variable="title" font-weight="bold"/>
+        <text class="btn" variable="title"/>
       </else>
     </choose>
   </macro>
@@ -129,56 +128,56 @@
     </sort>
     <layout>
       <text macro="author" suffix=" "/>
-      <group display="block">
-        <choose>
-          <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
-            <group display="block" prefix=" " delimiter=" " suffix=",">
-              <text macro="title"/>
-              <text macro="edition"/>
-              <text macro="editor"/>
+  <group display="block">
+      <choose>
+        <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
+          <group display="block" prefix=" " delimiter=" " suffix=",">
+            <text macro="title"/>
+            <text macro="edition"/>
+            <text macro="editor"/>
+          </group>
+          <text prefix=" " suffix="." macro="publisher"/>
+        </if>
+        <else-if type="chapter paper-conference" match="any">
+          <text macro="title" prefix=" " suffix="."/>
+          <group display="block" prefix=" " delimiter=" ">
+            <text term="in" text-case="capitalize-first"/>
+            <text macro="editor"/>
+            <text variable="container-title" font-style="italic" suffix="."/>
+            <text variable="collection-title" suffix="."/>
+            <text variable="event" suffix="."/>
+            <group suffix="." delimiter=", ">
+              <text macro="publisher" prefix=" "/>
+              <text macro="pages"/>
             </group>
-            <text prefix=" " suffix="." macro="publisher"/>
-          </if>
-          <else-if type="chapter paper-conference" match="any">
-            <text macro="title" prefix=" " suffix="."/>
-            <group display="block" prefix=" " delimiter=" ">
-              <text term="in" text-case="capitalize-first"/>
-              <text macro="editor"/>
-              <text variable="container-title" font-style="italic" suffix="."/>
-              <text variable="collection-title" suffix="."/>
-              <text variable="event" suffix="."/>
-              <group suffix="." delimiter=", ">
-                <text macro="publisher" prefix=" "/>
-                <text macro="pages"/>
-              </group>
+          </group>
+        </else-if>
+        <else-if type="thesis">
+          <group display="block" prefix=" " suffix="." delimiter=". ">
+            <text macro="title"/>
+            <text variable="genre"/>
+            <text macro="publisher"/>
+          </group>
+        </else-if>
+        <else>
+          <group display="block" suffix=".">
+            <text macro="title" prefix=" "/>
+            <text macro="editor" prefix=" "/>
+          </group>
+          <group display="block" prefix=" " suffix=".">
+            <text variable="container-title" font-style="italic"/>
+            <group prefix=", ">
+              <text variable="volume"/>
+              <text variable="issue" prefix="(" suffix=")"/>
             </group>
-          </else-if>
-          <else-if type="thesis">
-            <group display="block" prefix=" " suffix="." delimiter=". ">
-              <text macro="title"/>
-              <text variable="genre"/>
-              <text macro="publisher"/>
+            <group display="block" prefix=", ">
+              <label variable="page" form="short"/>
+              <text variable="page"/>
             </group>
-          </else-if>
-          <else>
-            <group display="block" suffix=".">
-              <text macro="title" prefix=" "/>
-              <text macro="editor" prefix=" "/>
-            </group>
-            <group display="block" prefix=" " suffix=".">
-              <text variable="container-title" font-style="italic"/>
-              <group prefix=", ">
-                <text variable="volume"/>
-                <text variable="issue" prefix="(" suffix=")"/>
-              </group>
-              <group display="block" prefix=", ">
-                <label variable="page" form="short"/>
-                <text variable="page"/>
-              </group>
-            </group>
-          </else>
-        </choose>
-      </group>
+          </group>
+        </else>
+      </choose>
+  </group>
       <text prefix=" " macro="access" suffix="."/>
     </layout>
   </bibliography>

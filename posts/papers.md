@@ -2,4 +2,4 @@
 layout: default
 ---
 
-{% bibliography --file papers%}.
+{% bibliography --file papers%}

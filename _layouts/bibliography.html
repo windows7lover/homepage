@@ -10,43 +10,48 @@
 </style>
 
 <div id="{{key}}-materials">
-	
   <div class="nav nav-pills">
+		<a data-toggle="collapse" data-target="#{{key}}-bibtex">[bibtex]</a>&nbsp;
 
-	
-		{% if entry.abstractfile %}
+		{% if entry.abstract %}
 			<a data-toggle="collapse" data-target="#{{key}}-abstract">[Abstract]</a>&nbsp;
-		{% endif %}
-
-
-		{% if entry.bibtex %}
-			<a data-toggle="collapse" data-target="#{{key}}-bibtex">[bibtex]</a>&nbsp;
 		{% endif %}
 
     {% if entry.paperpdf %}
    		<a href="{{ site.url }}/pdf/{{entry.paperpdf}}">[PDF]</a>&nbsp;
     {% endif %}
-		
-
-		
-		{% if entry.abstractfile %}
+				
+		{% if entry.abstract %}
 			<div id="{{key}}-abstract" class="collapse">
-				{{entry.abstractfile}}
-				test
+			<div class="containerborder">
+<div markdown="1">
+### Abstract
+&nbsp;
+</div>
+				{{entry.abstract}}
+				<!--
+				<br>
+				<br/>
+				<div  align="center">
+					<div data-toggle="collapse" data-target="#{{key}}-abstract" class="btn2">^</div>&nbsp;
+				</div>
+				-->
+			</div>
 			</div>
 		{% endif %}
 
-		
-		{% if entry.bibtex %}
 			<div id="{{key}}-bibtex" class="collapse">
 <div markdown="1">
 {% highlight bibtex %}
 {{ site.mainbibfile | find_bib_entry: entry.key }}
 {% endhighlight %}
 </div>
+				<!--
+				<div  align="center">
+					<div data-toggle="collapse" data-target="#{{key}}-bibtex" class="btn2">^</div>&nbsp;
+				</div>
+				-->
 			</div>
-		{% endif %}
-
   </div>
 	<p class="vspace20px">
 	</p>	
