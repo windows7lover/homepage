@@ -1,0 +1,8 @@
+---
+---
+
+@import "_customVariables"
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "jekyll-theme-hacker";
+
+ol.bibliography { list-style-type: disc; padding: 0px; margin: 20px 0px 0px 0px; }
