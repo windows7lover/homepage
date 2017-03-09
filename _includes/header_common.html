@@ -7,9 +7,11 @@
 <p class="space10px"></p>
 <section id="navbar">
 
-    {% assign navigation_pages = (site.html_pages contains "index" or site.path2section ) | sort: 'nav_position' %}
+    {% assign navigation_pages = site.html_pages | sort: 'nav_position' %}
     {% for p in navigation_pages %}
-    	<a href="{{p.url}}" class="btn2">{{p.title}}</a>
+			{% if p.nav_position != blank %}
+	    	<a href="{{p.url}}" class="btn2">{{p.title}}</a>
+			{% endif %}
     {% endfor %}
 
 </section>
