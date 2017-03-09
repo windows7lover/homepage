@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %} 
+	
+	{% include header_small.html %}
+
+  <body>
+
+    <div class="container">
+			<div class="row">
+		      <div class="col-md-5">
+		      	{{ content}}
+		      </div>
+		      <div class="col-md-5" style="margin-left:20px;" >
+						{% google_map width="100%" show_popup="true" zoom="15%" %}
+					</div>
+		  </div>
+    </div>
+    {% include analytics.html %}
+  </body>
+	{% include footer.html %}
+</html>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Slides
+title: Slides/Poster
 nav_position: 3
 ---
 
