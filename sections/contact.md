@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Contact
-nav_position: 5
-tag: section
+nav_position: 6
 ---
 
 contact

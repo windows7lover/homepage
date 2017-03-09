@@ -9,5 +9,5 @@ scholar:
   repository: pdf
   bibliography_template: bibliography
   group_by: type,year
-  group_order: descending,descending
+  group_order: ascending,descending
 mainbibfile: _bibliography/papers.bib
