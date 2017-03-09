@@ -1,5 +1,7 @@
 ---
 layout: main_page
+title: Home
+nav_position: 1
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
