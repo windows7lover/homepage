@@ -1,8 +1,7 @@
 ---
 layout: default
 title: About
-nav_position: 4
-tag: section
+nav_position: 5
 ---
 
 about

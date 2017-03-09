@@ -18,6 +18,11 @@ body {
   margin: 0 auto;
 }
 
+.smallcontainer {
+  width: 50%;
+  margin: 0 auto;
+}
+
 
 .containerborder {
   font-size: 14px;
@@ -72,7 +77,8 @@ header h1 {
 
 header h1:before {
   content: ">> ";
-  font-size: 24px;
+  font-size: 30px;
+  letter-spacing: -5px;
 }
 
 header h2 {
@@ -268,6 +274,7 @@ hr {
 a {
   color: #63c0f5;
   text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
+	cursor: pointer; cursor: hand;
 }
 
 /* Clearfix */
