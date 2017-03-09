@@ -11,3 +11,11 @@ scholar:
   group_by: type,year
   group_order: ascending,descending
 mainbibfile: _bibliography/papers.bib
+gems:
+  - jekyll-maps
+maps:
+  google:
+    api_key: AIzaSyBpZjaOxwQ99hsT0FisGimrnDde9lXpV-A
+    marker_cluster:
+      enabled: false
+

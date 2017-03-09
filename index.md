@@ -1,13 +1,10 @@
 ---
-layout: main_page
+layout: default
 title: Home
 nav_position: 1
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
-
-[Link to another page](posts/another-page).
-[Publication list](posts/papers).
 
 There should be whitespace between paragraphs.
 

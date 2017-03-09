@@ -11,11 +11,12 @@
 
 <div id="{{key}}-materials">
   <div class="nav nav-pills">
-		<a data-toggle="collapse" data-target="#{{key}}-bibtex">[bibtex]</a>&nbsp;
-
 		{% if entry.abstract %}
 			<a data-toggle="collapse" data-target="#{{key}}-abstract">[Abstract]</a>&nbsp;
 		{% endif %}
+
+		<a data-toggle="collapse" data-target="#{{key}}-bibtex">[bibtex]</a>&nbsp;
+
 
     {% if entry.paperpdf %}
    		<a href="{{ site.url }}/pdf/{{entry.paperpdf}}">[PDF]</a>&nbsp;
@@ -23,20 +24,9 @@
 				
 		{% if entry.abstract %}
 			<div id="{{key}}-abstract" class="collapse">
-			<div class="containerborder">
-<div markdown="1">
-### Abstract
-&nbsp;
-</div>
-				{{entry.abstract}}
-				<!--
-				<br>
-				<br/>
-				<div  align="center">
-					<div data-toggle="collapse" data-target="#{{key}}-abstract" class="btn2">^</div>&nbsp;
+				<div class="containerborder">
+					{{entry.abstract}}
 				</div>
-				-->
-			</div>
 			</div>
 		{% endif %}
 
@@ -46,11 +36,6 @@
 {{ site.mainbibfile | find_bib_entry: entry.key }}
 {% endhighlight %}
 </div>
-				<!--
-				<div  align="center">
-					<div data-toggle="collapse" data-target="#{{key}}-bibtex" class="btn2">^</div>&nbsp;
-				</div>
-				-->
 			</div>
   </div>
 	<p class="vspace20px">

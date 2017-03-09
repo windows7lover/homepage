@@ -10,7 +10,11 @@
     {% assign navigation_pages = site.html_pages | sort: 'nav_position' %}
     {% for p in navigation_pages %}
 			{% if p.nav_position != blank %}
-	    	<a href="{{p.url}}" class="btn2">{{p.title}}</a>
+				{% if p.nav_position == page.nav_position %}
+			  	<a href="{{p.url}}" class="btn2active">{{p.title}}</a>
+				{% else %}
+			  	<a href="{{p.url}}" class="btn2">{{p.title}}</a>
+				{% endif %}
 			{% endif %}
     {% endfor %}
 
