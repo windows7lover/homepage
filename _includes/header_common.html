@@ -5,11 +5,11 @@
 </style>
 
 <p class="space10px"></p>
-
 <section id="navbar">
-    <a href="{{ site.url }}" class="btn2">Home</a>
-    <a href="{{ site.url }}/posts/papers.html" class="btn2">Publications</a>
-    <a href="{{ site.url }}" class="btn2">My projects</a>
-    <a href="{{ site.url }}" class="btn2">About</a>
-    <a href="{{ site.url }}" class="btn2">Contact</a>
+
+    {% assign navigation_pages = (site.html_pages contains "index" or site.path2section ) | sort: 'nav_position' %}
+    {% for p in navigation_pages %}
+    	<a href="{{p.url}}" class="btn2">{{p.title}}</a>
+    {% endfor %}
+
 </section>
