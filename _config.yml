@@ -1,7 +1,6 @@
 title: Damien Scieur
 status: Engineer in Applied Mathematics
 employer: Phd. Student at INRIA/ENS
-show_downloads: true
 highlighter: pygments
 google_analytics:
 theme: 
@@ -12,4 +11,3 @@ scholar:
   group_by: type,year
   group_order: descending,descending
 mainbibfile: _bibliography/papers.bib
-path2sections: sections
