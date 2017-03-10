@@ -14,6 +14,7 @@ Why ? Because this may be useful for someone. Maybe. Anyway, this is a (free) gi
 <br>
 ## About me
 
+### Where are you from?
 I am an element of the set Belgium, more precisely a part of one of its subsets, [Wallonia](https://en.wikipedia.org/wiki/Wallonia). My native language is french but I can, of course, speak a perfect broken english.
 
 <br>
@@ -39,6 +40,16 @@ created together the [FAST](https://web.stanford.edu/~lcambier/fast/) toolbox fo
 When I work, I prefer to code in Matlab for prototyping. However, sometimes I use C++ when efficiency and speed are important. Finally, for papers, I always use Latex.
 
 For this website, I used an amazing tool called [Jekyll](https://jekyllrb.com/). This allow you to "*code*" your website, then generate it. A good comparison may be done with Latex, which is a programming language to output good PDF files. If you want to have more information, I invite you to visit my [GitHub](https://github.com/windows7lover/homepage) page.
+
+
+<br>
+## You want to lose time?
+Sure, who don't? Here is my personnal selection:
+- [Super-hexagon](http://terrycavanaghgames.com/hexagon/), in particular if you like polygons.
+- [Wolfenstein](http://3d.wolfenstein.com/), a old DOOM-like game.
+- The classicals [Ph.D. commics](http://phdcomics.com/), [xkcd](https://xkcd.com/) and [smbc](http://www.smbc-comics.com/). But you already know these, isn't it? ;-)
+- [2048](https://gabrielecirulli.github.io/2048/), for the geeks who count in base 2.
+
 
 
 <br>

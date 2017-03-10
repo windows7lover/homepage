@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %} 
+	
+	{% include header_small.html %}
+
+  <body>
+
+		<style>
+			img {
+					float: right;
+					margin: 0 0 30px 30px;
+			}
+		</style>
+
+		{% for project in site.project_entries %}
+
+		  <div class="container">
+			    <h2> {{project.title}} </h2>
+					<p>
+			    <img src="{{ project.picture }}" alt="" class= "img-responsive" width="30%";>
+					{{project.content}}
+					</p>
+					{% if project.url %}
+						<a href = "{{project.website}}"> [Website]</a>
+					{% endif %}
+					 
+					{% if project.git %}
+						<a href = "{{project.git}}"> [Git repository] </a>
+					{% endif %}
+				</div>
+		  </div>
+			<hr>
+			<br>
+		{% endfor %}
+    {% include analytics.html %}
+  </body>
+	{% include footer.html %}
+</html>
+
+
