@@ -18,4 +18,10 @@ maps:
     api_key: AIzaSyBpZjaOxwQ99hsT0FisGimrnDde9lXpV-A
     marker_cluster:
       enabled: false
+collections:
+  - project_entries
+  - slide_entries
+  - poster_entries
+      
+    
 

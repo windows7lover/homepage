@@ -6,31 +6,43 @@
     float:left;
 }
 
-
-div.circle-avatar{
-/* make it responsive */
-max-width: 150px;
-width:150px;
-height:150px;
-display:block;
-/* div height to be the same as width*/
-padding-top:100%;
-
-/* make it a circle */
-border-radius:50%;
-
-/* Centering on image`s center*/
-background-position-y: center;
-background-position-x: center;
-background-repeat: no-repeat;
-
-/* it makes the clue thing, takes smaller dimension to fill div */
-background-size: cover;
-
-/* it is optional, for making this div centered in parent*/
-margin: 0 auto;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
+h1 a:link {
+  font-size: 30px;
+  line-height: 1.5;
+  margin: 0 0 0 0px;
+  font-weight: bold;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  color: #b5e853;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+               0 0 5px rgba(181, 232, 83, 0.1),
+               0 0 10px rgba(181, 232, 83, 0.1);
+  letter-spacing: -1px;
+  -webkit-font-smoothing: antialiased;
 }
+
+
+
+h1 a:link {
+  color: #b5e853;
+}
+
+h1 a:visited {
+  color: #b5e853;
+}
+
+h1 a:active {
+  color: #b5e853;
+}
+
+h1 a:hover {
+  color: #b5e853;
+  text-shadow: 0px 0px 10px #b5e853;
+}
+
+
+.v-center {
+  position: relative;
+  transform: translateY(50%);
+}
+
+
