@@ -42,9 +42,23 @@ module Jekyll
 					
 				end
 			end
+			s 
+			return s
+    end
+
+		def correctBibEntry(entry)
+			s = "";
+			entry.each_line do |line|
+				if not BanStrings.any? { |banstr| line.include? banstr }
+					s << line; # we check if the line contains a forbiden string, like paperpdf
+				end
+			end
+			s.sub!("{%raw%}", "")
+			s.sub!("{%endraw%}", "")
 			s # return
 			return s
     end
+
   end
 end
 
