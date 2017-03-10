@@ -6,10 +6,10 @@ google_analytics:
 theme: 
 scholar:
   style: _bibliography/custom_bibstyle
-  repository: pdf
   bibliography_template: bibliography
   group_by: type,year
   group_order: ascending,descending
+  
 mainbibfile: _bibliography/papers.bib
 gems:
   - jekyll-maps
@@ -22,6 +22,9 @@ collections:
   - project_entries
   - slide_entries
   - poster_entries
+dir_papers: pdf/papers
+dir_slides: pdf/slides
+dir_posters: pdf/posters
       
     
 

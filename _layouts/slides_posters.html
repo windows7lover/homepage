@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %} 
+	
+	{% include header_small.html %}
+
+  <body>
+		<div class="container">
+
+
+<div id="t">
+    hello
+</div>
+<script>
+document.getElementById("t").innerHTML = "new content"
+</script>
+
+
+
+
+			<h2> Talks </h2>
+			{% assign sorted_entries =  site.slide_entries | sort: 'year','last'%}
+			{% for slide in sorted_entries reversed %}
+				<h4> {{slide.title}} </h4>
+				{% if slide.conference %}
+					{{slide.conference}}
+				{% endif %}
+				{% if slide.location %}
+					in {{slide.location}}
+				{% endif %}
+				{% if slide.thedate %}
+					on {{slide.thedate}}
+				{% endif %}
+				{% if slide.year %}
+				  ({{slide.year}})
+				{% endif %}	<br>
+
+				{% if slide.paperref %}
+					<a data-toggle="collapse" data-target="#{{forloop.index}}-slide">[Associated paper]</a>&nbsp;				
+				{% endif %}
+				
+				{% if slide.paperref %}
+					<div id="{{forloop.index}}-slide" class="collapse">
+						{% bibliography -q @*[key={{slide.paperref}}] --group_by none %}
+					</div>
+				{% endif %}
+				<br>
+				{% endfor %}
+			<hr>
+		</div>
+
+    {% include analytics.html %}
+  </body>
+	{% include footer.html %}
+</html>
+
+
