@@ -3,15 +3,12 @@
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 <script>
-  function getTargetFromTrigger($trigger) {
-    var href
+  getTargetFromTrigger = function($trigger) {
     var target = $trigger.attr('data-target')
     || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
 
     var tarObj = $trigger.parent().children(target); //HACKZ, search in current block scope first
     if(!tarObj)
     tarObj = $(target);
-
-    return tarObj;
   }
 </script>
