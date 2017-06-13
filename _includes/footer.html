@@ -1,14 +1,4 @@
 <script src="{{ site.baseurl }}/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="{{ site.baseurl }}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
-<script>
-  getTargetFromTrigger = function($trigger) {
-    var target = $trigger.attr('data-target')
-    || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
-
-    var tarObj = $trigger.parent().children(target); //HACKZ, search in current block scope first
-    if(!tarObj)
-    tarObj = $(target);
-  }
-</script>
+<script type="text/javascript" src="/assets/js/collapse_custom.js"></script>
