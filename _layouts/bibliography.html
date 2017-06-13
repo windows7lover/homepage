@@ -1,6 +1,9 @@
 ---
 ---
 
+
+
+
 {{reference}}
 
 <style>
@@ -20,24 +23,27 @@
 
 
     {% if entry.paperpdf %}
-   		<a href="{{ site.url }}/{{site.dir_papers}}/{{entry.paperpdf}}">[PDF]</a>&nbsp;
+   		<a href="{{ site.url }}/{{site.dir_papers}}/{{entry.paperpdf}}" target="_blank">[PDF]</a>&nbsp;
     {% endif %}
 				
 		{% if entry.abstract %}
 
-
 			<div id="{{key}}-idAbstract" class="collapse" data-local="#myContent">
-				<div class="containerborder">
-					{{entry.abstract}}
-				</div>
+                <div class="marge">
+                    <div class="containerborder">
+                        {{entry.abstract}}
+                    </div>
+                </div>
 			</div>
 		{% endif %}
 
 			<div id="{{key}}-idBibtex" class="collapse" data-local="#myContent">
+<div class="marge">
 <div markdown="1">
 {% highlight bibtex %}
 {{ entry.bibtex | correctBibEntry }}
 {% endhighlight %}
+</div>
 </div>
 			</div>
   </div>
