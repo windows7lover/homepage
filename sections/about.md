@@ -28,7 +28,7 @@ While I am thinking, we are still looking for a 4<sup>th</sup> player for Warcra
 <br>
 ## My collegues
 
-At Inria, I initialy worked with [Amit Bermanis](https://sites.google.com/site/amitbermanis/) and [Nicolas Boumal](https://web.math.princeton.edu/~nboumal/#about) (Belgium ftw). They left 6-9 month after my arrival, so now I work with [Gauthier Gidel](http://www.di.ens.fr/~gidel/#/), [Antoine Recanati](https://www.di.ens.fr/AntoineRecanati.html.fr) and [Vincent Roulet](http://www.di.ens.fr/~roulet/).  
+At Inria, my office mates were [Amit Bermanis](https://sites.google.com/site/amitbermanis/) and [Nicolas Boumal](https://web.math.princeton.edu/~nboumal/#about). They left 6-9 months after my arrival, so now I am in the same office than [Gauthier Gidel](http://www.di.ens.fr/~gidel/#/), [Antoine Recanati](https://www.di.ens.fr/AntoineRecanati.html.fr) and [Vincent Roulet](http://www.di.ens.fr/~roulet/).  
 
 During my master, I worked a lot with [Léopold Cambier](https://people.stanford.edu/lcambier/), which is now a Ph.D. student at Standford. For example, we 
 created together the [FAST](https://web.stanford.edu/~lcambier/fast/) toolbox for Matlab.
