@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %} 
+    {% include header_small.html %}
+
+  <body>
+  
+    <div class="container">
+        <img class="img-circle", height = "200px", width = "200px" src="pict/profile.jpg" />
+        <h1>Damien Scieur's homepage</h1>
+        <hr/>
+        Hello visitor, and welcome on my home page!
+    </div>
+    <div class="container">
+        <section id="main_content">
+            {{ content }}
+        </section>
+    </div>
+
+    {% include analytics.html %}
+  </body>
+	{% include footer.html %}
+</html>
