@@ -36,7 +36,7 @@
   </macro>
   <macro name="author-short">
     <names variable="author">
-      <name form="short" and="symbol" delimiter=", " delimiter-precedes-last="never" initialize-with=". "/>
+      <name form="long" and="symbol" delimiter=", " delimiter-precedes-last="never" initialize-with=". "/>
       <substitute>
         <names variable="editor"/>
         <names variable="translator"/>
@@ -123,15 +123,14 @@
   </citation>
   <bibliography>
     <sort>
-      <key macro="author"/>
+      <key macro="author-short"/>
       <key variable="title"/>
     </sort>
     <layout>
-      <text macro="author" suffix=" "/>
-      <group display="block">
+      <text macro="author-short" suffix="."/>
         <choose>
           <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
-            <group display="block" prefix=" " delimiter=" " suffix=".">
+            <group prefix=" " delimiter=" " suffix=".">
               <text macro="title"/>
               <text macro="edition"/>
               <text macro="editor"/>
@@ -146,21 +145,17 @@
               <text variable="container-title" font-style="italic" suffix="."/>
               <text variable="collection-title" suffix="."/>
               <text variable="event" suffix="."/>
-              <group suffix="." delimiter=", ">
-                <text macro="publisher" prefix=" "/>
-                <text macro="pages"/>
-              </group>
             </group>
           </else-if>
           <else-if type="thesis">
-            <group display="block" prefix=" " suffix="." delimiter=". ">
+            <group prefix=" " suffix="." delimiter=". ">
               <text macro="title"/>
               <text variable="genre"/>
               <text macro="publisher"/>
             </group>
           </else-if>
           <else>
-            <group display="block" suffix=".">
+            <group suffix=".">
               <text macro="title" prefix=" "/>
               <text macro="editor" prefix=" "/>
             </group>
@@ -177,7 +172,6 @@
             </group>
           </else>
         </choose>
-      </group>
       <text prefix=" " macro="access" suffix="."/>
     </layout>
   </bibliography>

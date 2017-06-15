@@ -19,3 +19,6 @@ My main research interest is **convex optimization**, but I am also interested i
 - *Deterministic and Stochastic Optimization*,
 - *Generic Acceleration Methods*,
 - *Integration Algorithms for ODE* (and their links with optimization).
+
+## External Links
+> My Github Page
