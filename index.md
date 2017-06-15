@@ -15,7 +15,7 @@ Prior to that, I graduated from [École Polytechnique de Louvain](https://uclouv
 Moreover, I collaborated with [Leopold Cambier](https://people.stanford.edu/lcambier/) and [Anthony Papavasiliou](http://perso.uclouvain.be/anthony.papavasiliou/public_html/) for the creation of the [FAST toolbox](https://web.stanford.edu/~lcambier/fast/), and also with [Raphael Jungers](http://perso.uclouvain.be/raphael.jungers/content/home) and [Julien Hendrickx](https://perso.uclouvain.be/julien.hendrickx/) in the context of the [JSR Toolbox](http://fr.mathworks.com/matlabcentral/fileexchange/33202-the-jsr-toolbox).
 
 ## Research interests
-My main research interest is **convex optimization**, but I am also interested in **numerical analysis**. For example,
-- *Generic Acceleration Methods*
-- *Integration Algorithms for ODE* (and their links with optimization)
-- *Stochastic Optimization*
+My main research interest is **convex optimization**, but I am also interested in **numerical analysis**. Here is a (non-exhaustive) selection of research topics:
+- *Deterministic and Stochastic Optimization*,
+- *Generic Acceleration Methods*,
+- *Integration Algorithms for ODE* (and their links with optimization).
