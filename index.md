@@ -21,4 +21,6 @@ My main research interest is **convex optimization**, but I am also interested i
 - *Integration Algorithms for ODE* (and their links with optimization).
 
 ## External Links
-> My Github Page
+- [Github](https://github.com/windows7lover)
+- [Google Scholar](https://scholar.google.fr/citations?user=hNscQzgAAAAJ&hl=fr)
+- [LinkedIn](https://www.linkedin.com/in/damien-scieur-6873ba82/)
