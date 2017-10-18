@@ -7,19 +7,21 @@
     
     {% capture presentation_idx %}{{forloop.index}}{% endcapture %}
 
-    <h4> {{presentation_data.title}} {% if presentation_data.papers %} <a data-toggle="collapse" data-target="#{{presentation_idx}}-{{type}}">[Associated paper]</a>{% endif %}&nbsp; </h4>
+    <b> {{presentation_data.title}} {% if presentation_data.papers %} <a data-toggle="collapse" data-target="#{{presentation_idx}}-{{type}}">[Associated paper]</a>{% endif %}&nbsp; </b>
     
     
     <div class="marge">
         {% for slide in slide_title.items %}
                 - 
-                {% if slide.conference %}
-                    {{slide.conference}}
-                {% endif %}
-                {% if slide.location %}
-                    in {{slide.location}}
-                {% endif %}
-                <span style="color:#808080">{% if slide.thedate or slide.year%}({% endif %}{% if slide.thedate %}{{slide.thedate}}{% endif %}{% if slide.year %} {{slide.year}}{% endif %}{% if slide.thedate or slide.year%}){% endif %}</span>
+                <i>
+                    {% if slide.conference %}
+                        {{slide.conference}}
+                    {% endif %}
+                    {% if slide.location %}
+                        in {{slide.location}}
+                    {% endif %}
+                    <span style="color:#808080">{% if slide.thedate or slide.year%}({% endif %}{% if slide.thedate %}{{slide.thedate}}{% endif %}{% if slide.year %} {{slide.year}}{% endif %}{% if slide.thedate or slide.year%}){% endif %}</span>
+                </i>
                 {% if slide.slidepdf %}
                     <a href="{{ site.url }}/{{site.dir_slides}}/{{slide.slidepdf}}" target="_blank">[PDF]</a>
                 {% endif %}
