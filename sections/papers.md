@@ -4,4 +4,4 @@ title: Publications
 nav_position: 2
 ---
 
-{% bibliography %}
+{% bibliography --file references %}

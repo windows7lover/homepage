@@ -7,64 +7,30 @@
   <body>
 		<div class="container">
 		
+		
 			<h2> Talks </h2>
 			<br>
+			{% assign sorted_entries =  site.talk_entries | sort: 'year' | reverse %}
+			{% assign metadata = site.talk_metadata %}
+			{% assign type = "talk" %}
+			{% include slides_display_list.html %}
 			
-			{% assign sorted_entries =  site.slide_entries | sort: 'year' | reverse'%}
-			{% assign grouped_entries = sorted_entries | group_by:'title' %}
+			<h2> Informal Presentations </h2>
+			<br>
+			{% assign sorted_entries =  site.presentation_other_entries | sort: 'year' | reverse %}
+			{% assign metadata = site.presentation_other_metadata %}
+			{% assign type = "other" %}
+			{% include slides_display_list.html %}
 			
+			<h2> Posters </h2>
+			<br>
+			{% assign sorted_entries =  site.poster_entries | sort: 'year' | reverse %}
+			{% assign metadata = site.poster_metadata %}
+			{% assign type = "poster" %}
+			{% include slides_display_list.html %}
 			
-			{% for slide_title in  grouped_entries %}
-			
-                {% assign presentation_data = site.presentation_metadata | where:"title", slide_title.name | first %} 
-                
-                {% capture presentation_idx %}{{forloop.index}}{% endcapture %}
-			
-                <h4> {{presentation_data.title}} <a data-toggle="collapse" data-target="#{{presentation_idx}}-presentation">[Associated paper]</a>&nbsp; </h4> 
-                
-                
-                <div class="marge">
-                    {% for slide in slide_title.items %}
-                            - 
-                            {% if slide.conference %}
-                                {{slide.conference}}
-                            {% endif %}
-                            {% if slide.location %}
-                                in {{slide.location}}
-                            {% endif %}
-                            {% if slide.thedate %}
-                                on {{slide.thedate}}
-                            {% endif %}
-                            {% if slide.year %}
-                                {{slide.year}}
-                            {% endif %}	
-                            {% if slide.slidepdf %}
-                                <a href="{{ site.url }}/{{site.dir_slides}}/{{slide.slidepdf}}" target="_blank">[Slides]</a>
-                            {% endif %}
-                            {% if slide.video_url %}
-                                <a href="{{slide.video_url}}" target="_blank">[Video]</a>
-                            {% endif %}<br>
-                        
-                    {% endfor %}
-                    
-                </div>
-                
-                
-                <div id="{{presentation_idx}}-presentation" class="collapse">
-                    <div class="marge">
-                        <h4> Associated paper(s): </h4>
-                        <div class="marge">
-                                {% for paper in presentation_data.papers %}
-                                    {% bibliography -q @*[key={{paper}}] --group_by none %}
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-            {% endfor %}
-			<hr>
 		</div>
-
+		
     {% include analytics.html %}
   </body>
 	{% include footer.html %}

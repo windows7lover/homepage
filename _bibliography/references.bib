@@ -10,24 +10,24 @@ References
   booktitle={Advances In Neural Information Processing Systems},
   pages={712--720},
   year={2016},
-	paperpdf={6267-regularized-nonlinear-acceleration.pdf},
+	paperpdf={Regularized Nonlinear Acceleration.pdf},
 	abstract={We describe a convergence acceleration technique for generic optimization problems. Our scheme computes estimates of the optimum from a nonlinear average of the iterates produced by any optimization method. The weights in this average are computed via a simple and small linear system, whose solution can be updated online. This acceleration scheme runs in parallel to the base algorithm, providing improved estimates of the solution on the fly, while the original optimization method is running. Numerical experiments are detailed on classical classification problems.}
 }
 
 
-@techreport{scieur2017integration,
+@inproceedings{scieur2017integration,
   title={Integration Methods and Accelerated Optimization Algorithms},
   author={Scieur, Damien and Roulet, Vincent and Bach, Francis and d'Aspremont, Alexandre},
-  journal={arXiv preprint arXiv:1702.06751},
+  journal={Advances In Neural Information Processing Systems},
   year={2017},
 	paperpdf={Integration Methods and Accelerated Optimization Algorithms.pdf},	
-	abstract={We show that accelerated optimization methods can be seen as particular instances of multi-step integration schemes from numerical analysis, applied to the gradient flow equation. In comparison with recent advances in this vein, the differential equation considered here is the basic gradient flow and we show that multi-step schemes allow integration of this differential equation using larger step sizes, thus intuitively explaining acceleration results.}
+	abstract={We show that accelerated optimization methods can be seen as particular instances of multi-step integration schemes from numerical analysis, applied to the gradient flow equation. In comparison with recent advances in this vein, the differential equation considered here is the basic gradient flow and we show that multi-step schemes allow integration of this differential equation using larger step sizes, thus intuitively explaining acceleration results.},
 }
 
-@techreport{scieur2017nonlinear,
+@inproceedings{scieur2017nonlinear,
   title={Nonlinear Acceleration of Stochastic Algorithms},
   author={Scieur, Damien and d'Aspremont, Alexandre and Bach, Francis},
-  journal={arXiv preprint},
+  journal={Advances In Neural Information Processing Systems},
   year={2017},
 	paperpdf={Nonlinear Acceleration of Stochastic Algorithms.pdf},	
 	abstract={Extrapolation methods use the last few iterates of an optimization algorithm to produce a better estimate of the optimum. They were shown to achieve optimal convergence rates in a deterministic setting using simple gradient iterates. Here, we study extrapolation methods in a stochastic setting, where the iterates are produced by either a simple or an accelerated stochastic gradient algorithm. We first derive convergence bounds for arbitrary, potentially biased perturbations, then produce asymptotic bounds using the ratio between the variance of the noise and the accuracy of the current point. Finally, we apply this acceleration technique to stochastic algorithms such as SGD, SAGA, SVRG and Katyusha in different settings, and show significant performance gains.}
@@ -40,6 +40,18 @@ References
   year={2015},
   month = {jun},
   school = {Universit\'e catholique de Louvain},
-	paperpdf={masterthesis_scieur_damien.pdf},
+	paperpdf={Global Complexity Analysis For The Second-Order Methods.pdf},
 	abstract={The goal of this master thesis will be firstly to analyze with precision the behavior of the cubic regularization of Newton's method on strongly convex functions. During this analysis we will find that the regularisation does not work as well as expected when the function is also smooth, unlike the gradient method. We will thus propose some variants of the original algorithm in order to have better global performances.}
 }
+
+@article{papavasiliou2017application,
+  title={Application of Stochastic Dual Dynamic Programming to the Real-Time Dispatch of Storage under Renewable Supply Uncertainty},
+  author={Papavasiliou, Anthony and Mou, Yuting and Cambier, L{\'e}opold and Scieur, Damien},
+  booktitle={IEEE Transactions on Sustainable Energy},
+  year={2017},
+  publisher={IEEE},
+	paperpdf={Application of Stochastic Dual Dynamic Programming to the Real-Time Dispatch of Storage under Renewable Supply Uncertainty.pdf},
+	abstract={This paper presents a multi-stage stochastic programming formulation of transmission-constrained economic dispatch subject to multi-area renewable production uncertainty, with a focus on optimizing the dispatch of storage in real-time operations. This problem is resolved using stochastic dual dynamic programming. The applicability of the proposed approach is demonstrated on a realistic case study of the German power system calibrated against the solar and wind power integration levels of 2013-2014, with a 24-hour horizon and 15-minute time step. The value of the stochastic solution relative to the cost of a deterministic policy amounts to 1.1%, while the value of perfect foresight relative to the cost of the stochastic programming policy amounts to 0.8%. The relative performance of various alternative real-time dispatch policies is analyzed, and the sensitivity of the results is explored.}
+}
+
+

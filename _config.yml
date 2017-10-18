@@ -20,9 +20,12 @@ maps:
       enabled: false
 collections:
   - project_entries
-  - slide_entries
+  - talk_entries
+  - presentation_other_entries
   - poster_entries
-  - presentation_metadata
+  - talk_metadata
+  - presentation_other_metadata
+  - poster_metadata
 dir_papers: pdf/papers
 dir_slides: pdf/slides
 dir_posters: pdf/posters
