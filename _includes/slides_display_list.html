@@ -1,0 +1,45 @@
+{% assign grouped_entries = sorted_entries | group_by:'title' %}
+
+
+{% for slide_title in  grouped_entries %}
+
+    {% assign presentation_data = metadata | where:"title", slide_title.name | first %} 
+    
+    {% capture presentation_idx %}{{forloop.index}}{% endcapture %}
+
+    <h4> {{presentation_data.title}} {% if presentation_data.papers %} <a data-toggle="collapse" data-target="#{{presentation_idx}}-{{type}}">[Associated paper]</a>{% endif %}&nbsp; </h4>
+    
+    
+    <div class="marge">
+        {% for slide in slide_title.items %}
+                - 
+                {% if slide.conference %}
+                    {{slide.conference}}
+                {% endif %}
+                {% if slide.location %}
+                    in {{slide.location}}
+                {% endif %}
+                <span style="color:#808080">{% if slide.thedate or slide.year%}({% endif %}{% if slide.thedate %}{{slide.thedate}}{% endif %}{% if slide.year %} {{slide.year}}{% endif %}{% if slide.thedate or slide.year%}){% endif %}</span>
+                {% if slide.slidepdf %}
+                    <a href="{{ site.url }}/{{site.dir_slides}}/{{slide.slidepdf}}" target="_blank">[PDF]</a>
+                {% endif %}
+                {% if slide.video_url %}
+                    <a href="{{slide.video_url}}" target="_blank">[Video]</a>
+                {% endif %}<br>
+            
+        {% endfor %}
+    </div>
+    
+    <div id="{{presentation_idx}}-{{type}}" class="collapse">
+        <div class="marge">
+            <div class="containerborder_tight">
+                <h5>Associated paper(s):</h5>
+                        {% for paper in presentation_data.papers %}
+                            {% bibliography --file references --file references_other -q @*[key={{paper}}] --group_by none %}
+                        {% endfor %}
+            </div>
+        </div>
+    </div>
+        <br>
+{% endfor %}
+<hr>
