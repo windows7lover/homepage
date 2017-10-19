@@ -7,7 +7,7 @@ location:
   longitude: 2.3844624
 ---
 
-## Contact information  
+## Contact Information  
 ----------------------
 
 **Damien Scieur**  
@@ -17,4 +17,4 @@ location:
 75012 Paris, France.
 
 Office C408 (4<sup>th</sup> floor).  
-email: fistname·lastname(at)inria·fr
+Email: fistname·lastname(at)inria·fr
