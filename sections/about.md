@@ -5,10 +5,7 @@ nav_position: 5
 ---
 
 ## A random rumber, just for you!
-<pre><code><script>
-document.write(">> ")
-document.write(Math.round(Math.random().toFixed(2)*100))
-</script></code></pre>
+<pre><code class="random"></code></pre>
 Why ? Because this may be useful for someone. Maybe. Anyway, this is a (free) gift, so take it!
 
 <br>

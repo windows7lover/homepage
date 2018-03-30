@@ -1,0 +1,21 @@
+{
+  "name": "homepage",
+  "homepage": "https://github.com/windows7lover/homepage",
+  "authors": [],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap-sass": "^3.3.7",
+    "MathJax": "^2.7.3"
+  }
+}
