@@ -1,6 +1,6 @@
 _site/
 .sass-cache/
 .jekyll-metadata
-bower_components/
+_config.yml
 *~
 update
