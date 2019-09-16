@@ -16,7 +16,7 @@ plugins:
   - jekyll-maps
 maps:
   google:
-    api_key: AIzaSyBpZjaOxwQ99hsT0FisGimrnDde9lXpV-A
+    api_key: 
     marker_cluster:
       enabled: false
 collections:
