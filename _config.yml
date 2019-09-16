@@ -30,6 +30,5 @@ collections:
 dir_papers: pdf/papers
 dir_slides: pdf/slides
 dir_posters: pdf/posters
-      
-    
-
+exclude: 
+  - vendor
