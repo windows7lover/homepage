@@ -3,6 +3,58 @@
 References
 ==========
 
+@article{scieur2018online,
+  title={Online Regularized Nonlinear Acceleration},
+  author={Scieur, Damien and Oyallon, Edouard and d'Aspremont, Alexandre and Bach, Francis},
+  journal={arXiv preprint arXiv:1805.09639},
+  year={2018},
+  abstract={Regularized nonlinear acceleration (RNA) estimates the minimum of a function by post-processing iterates from an algorithm such as the gradient method. It can be seen as a regularized version of Anderson acceleration, a classical acceleration scheme from numerical analysis. The new scheme provably improves the rate of convergence of fixed step gradient descent, and its empirical performance is comparable to that of quasi-Newton methods. However, RNA cannot accelerate faster multistep algorithms like Nesterov's method and often diverges in this context. Here, we adapt RNA to overcome these issues, so that our scheme can be used on fast algorithms such as gradient methods with momentum. We show optimal complexity bounds for quadratics and asymptotically optimal rates on general convex minimization problems. Moreover, this new scheme works online, i.e., extrapolated solution estimates can be reinjected at each iteration, significantly improving numerical performance over classical accelerated methods.},
+  paperpdf={Online Regularized Nonlinear Acceleration.pdf}
+}
+
+@article{scieur2018nonlinear,
+  title={Nonlinear acceleration of cnns},
+  author={Scieur, Damien and Oyallon, Edouard and d'Aspremont, Alexandre and Bach, Francis},
+  journal={arXiv preprint arXiv:1806.00370},
+  year={2018},
+  abstract={The Regularized Nonlinear Acceleration (RNA) algorithm is an acceleration method capable of improving the rate of convergence of many optimization schemes such as gradient descend, SAGA or SVRG. Until now, its analysis is limited to convex problems, but empirical observations shows that RNA may be extended to wider settings. In this paper, we investigate further the benefits of RNA when applied to neural networks, in particular for the task of image recognition on CIFAR10 and ImageNet. With very few modifications of exiting frameworks, RNA improves slightly the optimization process of CNNs, after training.},
+  paperpdf={Nonlinear acceleration of cnns}
+}
+
+@phdthesis{scieur2018acceleration,
+  title={Acceleration in Optimization},
+  author={Scieur, Damien},
+  year={2018},
+  paperpdf={Acceleration in Optimization.pdf}
+}
+
+@article{scieur2019generalized,
+  title={Generalized Framework for Nonlinear Acceleration},
+  author={Scieur, Damien},
+  journal={arXiv preprint arXiv:1903.08764},
+  year={2019},
+  abstract={Nonlinear acceleration algorithms improve the performance of iterative methods, such as gradient descent, using the information contained in past iterates. However, their efficiency is still not entirely understood even in the quadratic case. In this paper, we clarify the convergence analysis by giving general properties that share several classes of nonlinear acceleration: Anderson acceleration (and variants), quasi-Newton methods (such as Broyden Type-I or Type-II, SR1, DFP, and BFGS) and Krylov methods (Conjugate Gradient, MINRES, GMRES). In particular, we propose a generic family of algorithms that contains all the previous methods and prove its optimal rate of convergence when minimizing quadratic functions. We also propose multi-secants updates for the quasi-Newton methods listed above. We provide a Matlab code implementing the algorithm.},
+  paperpdf={Generalized Framework for Nonlinear Acceleration.pdf}
+}
+
+@article{jelassi2019extra,
+  title={Extra-gradient with player sampling for provable fast convergence in n-player games},
+  author={Jelassi, Samy and Enrich, Carles Domingo and Scieur, Damien and Mensch, Arthur and Bruna, Joan},
+  journal={arXiv preprint arXiv:1905.12363},
+  year={2019},
+  paperpdf={Extra-gradient with player sampling for provable fast convergence in n-player games.pdf},
+  abstract={Data-driven model training is increasingly relying on finding Nash equilibria with provable techniques, e.g., for GANs and multi-agent RL. In this paper, we analyse a new extra-gradient method, that performs gradient extrapolations and updates on a random subset of players at each iteration. This approach provably exhibits the same rate of convergence as full extra-gradient in non-smooth convex games. We propose an additional variance reduction mechanism for this to hold for smooth convex games. Our approach makes extrapolation amenable to massive multiplayer settings, and brings empirical speed-ups, in particular when using cyclic sampling schemes. We demonstrate the efficiency of player sampling on large-scale non-smooth and non-strictly convex games. We show that the joint use of extrapolation and player sampling allows to train better GANs on CIFAR10.}
+}
+
+@inproceedings{bollapragada2019nonlinear,
+  title={Nonlinear Acceleration of Primal-Dual Algorithms},
+  author={Bollapragada, Raghu and Scieur, Damien and d’Aspremont, Alexandre},
+  booktitle={The 22nd International Conference on Artificial Intelligence and Statistics},
+  pages={739--747},
+  year={2019},
+  abstract={We describe a convergence acceleration scheme for multi-step optimization algorithms. The extrapolated solution is written as a nonlinear average of the iterates produced by the original optimization algorithm. Our scheme does not need the underlying fixed-point operator to be symmetric, hence handles e.g. algorithms with momentum terms such as Nesterov’s accelerated method, or primal-dual methods such as Chambolle-Pock. The weights are computed via a simple linear system and we analyze performance in both online and offline modes. We use Crouzeix’s conjecture to show that acceleration is controlled by the solution of a Chebyshev problem on the numerical range of a nonsymmetric operator modelling the behavior of iterates near the optimum. Numerical experiments are detailed on image processing and logistic regression problems.},
+  paperpdf={Nonlinear Acceleration of Primal-Dual Algorithms.pdf}
+}
 
 @inproceedings{Kaneda2018optimal,
     title={Optimal Management of Storage for Offsetting Solar Power Uncertainty using Multistage Stochastic Programming},
@@ -22,7 +74,6 @@ References
 	abstract={We describe a convergence acceleration technique for generic optimization problems. Our scheme computes estimates of the optimum from a nonlinear average of the iterates produced by any optimization method. The weights in this average are computed via a simple and small linear system, whose solution can be updated online. This acceleration scheme runs in parallel to the base algorithm, providing improved estimates of the solution on the fly, while the original optimization method is running. Numerical experiments are detailed on classical classification problems.}
 }
 
-
 @inproceedings{scieur2017integration,
   title={Integration Methods and Accelerated Optimization Algorithms},
   author={Scieur, Damien and Roulet, Vincent and Bach, Francis and d'Aspremont, Alexandre},
@@ -40,7 +91,6 @@ References
 	paperpdf={Nonlinear Acceleration of Stochastic Algorithms.pdf},	
 	abstract={Extrapolation methods use the last few iterates of an optimization algorithm to produce a better estimate of the optimum. They were shown to achieve optimal convergence rates in a deterministic setting using simple gradient iterates. Here, we study extrapolation methods in a stochastic setting, where the iterates are produced by either a simple or an accelerated stochastic gradient algorithm. We first derive convergence bounds for arbitrary, potentially biased perturbations, then produce asymptotic bounds using the ratio between the variance of the noise and the accuracy of the current point. Finally, we apply this acceleration technique to stochastic algorithms such as SGD, SAGA, SVRG and Katyusha in different settings, and show significant performance gains.}
 }
-
 
 @mastersthesis{scieur2015master,
   title={Global Complexity Analysis For The Second-Order Methods},
