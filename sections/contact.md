@@ -3,8 +3,8 @@ layout: maps
 title: Contact
 nav_position: 7
 location:
-  latitude: 48.8416179
-  longitude: 2.3844624
+  latitude: 45.5301788
+  longitude: -73.6138232
 ---
 
 ## Contact Information  
@@ -12,9 +12,9 @@ location:
 
 **Damien Scieur**  
 
-[Paris-Inria](https://www.inria.fr/en/centre/paris),   
-2 Rue *Simone IFF*,  
-75012 Paris, France.
+[Samsung SAIL Montréal - Mila](https://mila.quebec/),
+6650 Rue Saint-Urbain, Montréal (QC),  
+H2S 3H1, Canada.
 
-Office C408 (4<sup>th</sup> floor).  
-Email: fistname·lastname(at)inria·fr
+Samsung SAIT office, ground floor.
+Email: fistname·lastname(at)gmail.com

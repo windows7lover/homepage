@@ -1,9 +1,10 @@
 title: Damien Scieur
 status: Engineer in Applied Mathematics
-employer: Phd. Student at INRIA/ENS
+employer: Research Scientist at Samsung SAIL Montreal
 highlighter: pygments
 google_analytics:
 theme: 
+encoding: utf-8
 scholar:
   style: _bibliography/custom_bibstyle
   bibliography_template: bibliography
@@ -11,7 +12,7 @@ scholar:
   group_order: ascending,descending
   
 mainbibfile: _bibliography/papers.bib
-gems:
+plugins:
   - jekyll-maps
 maps:
   google:
