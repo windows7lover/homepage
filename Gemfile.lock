@@ -28,13 +28,13 @@ GEM
       zeitwerk (~> 2.1, >= 2.1.8)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    autoprefixer-rails (9.6.1.1)
+    autoprefixer-rails (9.7.1)
       execjs
     bibtex-ruby (4.4.7)
       latex-decode (~> 0.0)
-    bootstrap-sass (3.3.7)
+    bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
+      sassc (>= 2.0.0)
     builder (3.2.3)
     citeproc (1.0.9)
       namae (~> 1.0)
@@ -167,7 +167,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  bootstrap-sass (~> 3.3.6)
+  bootstrap-sass (~> 3.4.1)
   jekyll-maps
   jekyll-scholar
   jekyll-theme-hacker!
