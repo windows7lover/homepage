@@ -1,0 +1,3 @@
+I"¯<p>I partially contributed to the JSR toolbox by implementing a few algorithms. The Joint Spectral Radius of a set of matrices characterizes the maximal asymptotic rate of growth of a product of matrices taken in this set when the length of the product increases. It is known to be very hard to compute. In recent years, many different methods have been proposed to approximate it.<br />
+These methods have different advantages, depending on the application, the type of matrices, the desired accuracy or running time, etc. This toolbox aims to provide the practitioner with the best available methods and propose an easy tool for the researcher to compare the different algorithms.</p>
+:ET

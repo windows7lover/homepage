@@ -1,15 +1,12 @@
 ---
 ---
 
-
-
-
 {{reference}}
 
 
 <style>
-  .vspace20px {
-     margin-bottom: 20px;
+  .vspace_defaut {
+     margin-bottom: 1.2rem;
   }
 </style>
 
@@ -22,9 +19,14 @@
 		<a data-toggle="collapse_custom" data-target="#{{key}}-idBibtex" data-local="#myContent">[Bibtex]</a>&nbsp;
 
 
-    {% if entry.paperpdf %}
-   		<a href="{{ site.url }}/{{site.dir_papers}}/{{entry.paperpdf}}" target="_blank">[PDF]</a>&nbsp;
-    {% endif %}
+		{% if entry.paperurl %}
+			<a href="{{entry.paperurl}}" target="_blank">[PDF]</a>&nbsp;
+		{% else %}
+			{% if entry.paperpdf %}
+				<a href="{{ site.url }}/{{site.dir_papers}}/{{entry.paperpdf}}" target="_blank">[PDF]</a>&nbsp;
+			{% endif %}
+		{% endif %}
+				
 				
 		{% if entry.abstract %}
 
@@ -35,7 +37,7 @@
 			</div>
 		{% endif %}
 
-			<div id="{{key}}-idBibtex" class="collapse" data-local="#myContent">
+		<div id="{{key}}-idBibtex" class="collapse" data-local="#myContent">
 
 <div markdown="1">
 {% highlight bibtex %}
@@ -45,7 +47,7 @@
 
 			</div>
   </div>
-	<p class="vspace20px">
+	<p class="vspace_defaut">
 	</p>	
 </div>
 

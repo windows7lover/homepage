@@ -37,7 +37,7 @@
             <div class="containerborder_tight">
                 <h5>Associated paper(s):</h5>
                         {% for paper in presentation_data.papers %}
-                            {% bibliography --file references --file references_other -q @*[key={{paper}}] --group_by none %}
+                            {% bibliography --file references -q @*[key={{paper}}] --group_by none %}
                         {% endfor %}
             </div>
         </div>

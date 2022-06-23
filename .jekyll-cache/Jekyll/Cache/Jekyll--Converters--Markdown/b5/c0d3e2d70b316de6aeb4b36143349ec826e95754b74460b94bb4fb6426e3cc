@@ -1,0 +1,8 @@
+I"i<p>FAST (Finally An SDDP Toolbox) is an easy-to-use Stochastic Dynamic Dual Programming (SDDP) toolbox for Matlab. It helps you to model and solve your problem easily and quickly! The goal of SDDP is solving large-scale stochastic problems, with an algorithm based on the idea of <a href="https://en.wikipedia.org/wiki/Cutting-plane_method">Cutting plane method</a>. <br />
+Three typical applications of FAST,</p>
+<ul>
+  <li><strong>Energy production</strong> In the energy production domain, FAST allows for accurate solutions when dealing with uncertain supply or demand of energy.</li>
+  <li><strong>Factory production line</strong> When the demand is unknow, FAST helps you plan your production to maximize your revenue.</li>
+  <li><strong>Financial products</strong> FAST allows you to efficiently deal with random portfolio in the stock exchange business.</li>
+</ul>
+:ET

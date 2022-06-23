@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 
+
 gemspec
 gem 'jekyll-scholar'
-gem 'bootstrap-sass', '~> 3.3.6'
-gem 'sass-rails', '>= 3.2'
+gem 'bootstrap-sass'
+gem 'sass-rails'
 gem 'kramdown'
-gem 'pygments.rb', "1.2.1"
+gem 'pygments.rb'
 gem 'jekyll-maps'
+gem 'webrick'
+gem 'bootstrap'

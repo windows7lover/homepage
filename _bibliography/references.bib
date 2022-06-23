@@ -3,13 +3,22 @@
 References
 ==========
 
+@inproceedings{abernethy2016faster,
+  title={Faster Convex Optimization: Simulated Annealing with an Efficient Universal Barrier},
+  author={Abernethy, Jacob and Hazan, Elad},
+  booktitle={International Conference on Machine Learning},
+  pages={2520--2528},
+  year={2016}
+}
+
 @article{scieur2018online,
   title={Online Regularized Nonlinear Acceleration},
   author={Scieur, Damien and Oyallon, Edouard and d'Aspremont, Alexandre and Bach, Francis},
   journal={arXiv preprint arXiv:1805.09639},
   year={2018},
   abstract={Regularized nonlinear acceleration (RNA) estimates the minimum of a function by post-processing iterates from an algorithm such as the gradient method. It can be seen as a regularized version of Anderson acceleration, a classical acceleration scheme from numerical analysis. The new scheme provably improves the rate of convergence of fixed step gradient descent, and its empirical performance is comparable to that of quasi-Newton methods. However, RNA cannot accelerate faster multistep algorithms like Nesterov's method and often diverges in this context. Here, we adapt RNA to overcome these issues, so that our scheme can be used on fast algorithms such as gradient methods with momentum. We show optimal complexity bounds for quadratics and asymptotically optimal rates on general convex minimization problems. Moreover, this new scheme works online, i.e., extrapolated solution estimates can be reinjected at each iteration, significantly improving numerical performance over classical accelerated methods.},
-  paperpdf={Online Regularized Nonlinear Acceleration.pdf}
+  paperpdf={Online Regularized Nonlinear Acceleration.pdf},
+  paperurl={https://arxiv.org/abs/1805.09639},
 }
 
 @article{scieur2018nonlinear,
@@ -18,14 +27,38 @@ References
   journal={arXiv preprint arXiv:1806.00370},
   year={2018},
   abstract={The Regularized Nonlinear Acceleration (RNA) algorithm is an acceleration method capable of improving the rate of convergence of many optimization schemes such as gradient descend, SAGA or SVRG. Until now, its analysis is limited to convex problems, but empirical observations shows that RNA may be extended to wider settings. In this paper, we investigate further the benefits of RNA when applied to neural networks, in particular for the task of image recognition on CIFAR10 and ImageNet. With very few modifications of exiting frameworks, RNA improves slightly the optimization process of CNNs, after training.},
-  paperpdf={Nonlinear acceleration of cnns}
+  paperurl={https://arxiv.org/abs/1806.00370},
 }
 
 @phdthesis{scieur2018acceleration,
   title={Acceleration in Optimization},
   author={Scieur, Damien},
   year={2018},
-  paperpdf={Acceleration in Optimization.pdf}
+  paperpdf={Acceleration in Optimization.pdf},
+  abstract={In many different fields such as optimization, the performance of a method is often characterized
+by its rate of convergence. However, accelerating an algorithm requires a lot of knowledge about
+the problem’s structure, and such improvement is done on a case-by-case basis. Many accelerated
+schemes have been developed in the past few decades and are massively used in practice. Despite
+their simplicity, such methods are usually based on purely algebraic arguments and often do not
+have an intuitive explanation.
+Recently, heavy work has been done to link accelerated algorithms with other fields of science, such as control theory or differential equations. However, these explanations often rely on
+complex arguments, usually using non-conventional tools in their analysis.
+One of the contributions of this thesis is a tentative explanation of optimization algorithms
+using the theory of integration methods, which has been well studied and enjoys a solid theoretical
+analysis. In particular, we will show that optimization scheme are special instance of integration
+methods when integrating the classical gradient flow. With standard arguments, we intuitively
+explain the origin of acceleration.
+On the other hand, accelerated methods usually need additional parameters in comparison
+with slower one, which are in most cases difficult to estimate. In addition, these schemes are
+designed for one particular setting and cannot be used elsewhere.
+In this thesis, we explore a new approach for accelerating optimization algorithms, which
+uses generic acceleration arguments. In numerical analysis, these tools have been developed for
+accelerating sequences of scalars or vectors, by building on the side another sequence with a
+better convergence rate. These methods can be combined with an iterative algorithm, speeding
+it up in most cases. In practice, extrapolation schemes are not widely used due to their lack of
+theoretical guarantees and their instability. We will extend these methods by regularizing them,
+allowing a deeper theoretical analysis and stronger convergence results, especially when applied
+to optimization methods.},
 }
 
 @article{scieur2019generalized,
@@ -34,16 +67,8 @@ References
   journal={arXiv preprint arXiv:1903.08764},
   year={2019},
   abstract={Nonlinear acceleration algorithms improve the performance of iterative methods, such as gradient descent, using the information contained in past iterates. However, their efficiency is still not entirely understood even in the quadratic case. In this paper, we clarify the convergence analysis by giving general properties that share several classes of nonlinear acceleration: Anderson acceleration (and variants), quasi-Newton methods (such as Broyden Type-I or Type-II, SR1, DFP, and BFGS) and Krylov methods (Conjugate Gradient, MINRES, GMRES). In particular, we propose a generic family of algorithms that contains all the previous methods and prove its optimal rate of convergence when minimizing quadratic functions. We also propose multi-secants updates for the quasi-Newton methods listed above. We provide a Matlab code implementing the algorithm.},
-  paperpdf={Generalized Framework for Nonlinear Acceleration.pdf}
-}
-
-@article{jelassi2019extra,
-  title={Extra-gradient with player sampling for provable fast convergence in n-player games},
-  author={Jelassi, Samy and Enrich, Carles Domingo and Scieur, Damien and Mensch, Arthur and Bruna, Joan},
-  journal={arXiv preprint arXiv:1905.12363},
-  year={2019},
-  paperpdf={Extra-gradient with player sampling for provable fast convergence in n-player games.pdf},
-  abstract={Data-driven model training is increasingly relying on finding Nash equilibria with provable techniques, e.g., for GANs and multi-agent RL. In this paper, we analyse a new extra-gradient method, that performs gradient extrapolations and updates on a random subset of players at each iteration. This approach provably exhibits the same rate of convergence as full extra-gradient in non-smooth convex games. We propose an additional variance reduction mechanism for this to hold for smooth convex games. Our approach makes extrapolation amenable to massive multiplayer settings, and brings empirical speed-ups, in particular when using cyclic sampling schemes. We demonstrate the efficiency of player sampling on large-scale non-smooth and non-strictly convex games. We show that the joint use of extrapolation and player sampling allows to train better GANs on CIFAR10.}
+  paperpdf={Generalized Framework for Nonlinear Acceleration.pdf},
+  paperurl={https://arxiv.org/abs/1903.08764}
 }
 
 @inproceedings{bollapragada2019nonlinear,
@@ -61,7 +86,8 @@ References
     author={Kaneda, Taku  and Losseau, Bruno and Papavasiliou, Anthony and Scieur, Damien and Cambier, Léopold and Henneaux, Pierre and Leemput, Niels},
     booktitle={Proceedings of 20th Power Systems Computation Conference (to appear)},
     year={2018},
-    abstract={Africa has recently engaged in implementing an aggressive renewable energy integration plan. A major challenge in the deployment of renewable power is the management of excess energy. The use of battery storage has been considered as a technically attractive solution. This paper tackles this operational problem using stochastic dual dynamical programming. We present an open-source MATLAB toolbox for multistage stochastic programming which employs stochastic dual dynamic programming. We use the toolbox in order to compare the stochastic solution to a greedy policy which operates batteries without future foresight as a benchmark. We consider a case study of storage management in Burkina Faso. We quantify the benefits of the stochastic solution and test the sensitivity of our results to the optimization horizon of the stochastic program.}
+    abstract={Africa has recently engaged in implementing an aggressive renewable energy integration plan. A major challenge in the deployment of renewable power is the management of excess energy. The use of battery storage has been considered as a technically attractive solution. This paper tackles this operational problem using stochastic dual dynamical programming. We present an open-source MATLAB toolbox for multistage stochastic programming which employs stochastic dual dynamic programming. We use the toolbox in order to compare the stochastic solution to a greedy policy which operates batteries without future foresight as a benchmark. We consider a case study of storage management in Burkina Faso. We quantify the benefits of the stochastic solution and test the sensitivity of our results to the optimization horizon of the stochastic program.},
+	paperurl={https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8443062}
 }
 
 @inproceedings{scieur2016regularized,
@@ -70,7 +96,7 @@ References
   booktitle={Advances In Neural Information Processing Systems},
   pages={712--720},
   year={2016},
-	paperpdf={Regularized Nonlinear Acceleration.pdf},
+	paperurl={https://arxiv.org/abs/1606.04133},
 	abstract={We describe a convergence acceleration technique for generic optimization problems. Our scheme computes estimates of the optimum from a nonlinear average of the iterates produced by any optimization method. The weights in this average are computed via a simple and small linear system, whose solution can be updated online. This acceleration scheme runs in parallel to the base algorithm, providing improved estimates of the solution on the fly, while the original optimization method is running. Numerical experiments are detailed on classical classification problems.}
 }
 
@@ -80,6 +106,7 @@ References
   journal={Advances In Neural Information Processing Systems},
   year={2017},
 	paperpdf={Integration Methods and Accelerated Optimization Algorithms.pdf},	
+	paperurl={https://arxiv.org/abs/1702.06751},
 	abstract={We show that accelerated optimization methods can be seen as particular instances of multi-step integration schemes from numerical analysis, applied to the gradient flow equation. In comparison with recent advances in this vein, the differential equation considered here is the basic gradient flow and we show that multi-step schemes allow integration of this differential equation using larger step sizes, thus intuitively explaining acceleration results.},
 }
 
@@ -112,4 +139,148 @@ References
 	abstract={This paper presents a multi-stage stochastic programming formulation of transmission-constrained economic dispatch subject to multi-area renewable production uncertainty, with a focus on optimizing the dispatch of storage in real-time operations. This problem is resolved using stochastic dual dynamic programming. The applicability of the proposed approach is demonstrated on a realistic case study of the German power system calibrated against the solar and wind power integration levels of 2013-2014, with a 24-hour horizon and 15-minute time step. The value of the stochastic solution relative to the cost of a deterministic policy amounts to 1.1%, while the value of perfect foresight relative to the cost of the stochastic programming policy amounts to 0.8%. The relative performance of various alternative real-time dispatch policies is analyzed, and the sensitivity of the results is explored.}
 }
 
+@article{bollapragada2022nonlinear,
+  title={Nonlinear acceleration of momentum and primal-dual algorithms},
+  author={Bollapragada, Raghu and Scieur, Damien and d'Aspremont, Alexandre},
+  journal={Mathematical Programming},
+  year={2022},
+  abstract={We describe convergence acceleration schemes for multistep optimization algorithms. The extrapolated solution is written as a nonlinear average of the iterates produced by the original optimization method. Our analysis does not need the underlying fixed-point operator to be symmetric, hence handles e.g. algorithms with momentum terms such as Nesterov's accelerated method, or primal-dual methods. The weights are computed via a simple linear system and we analyze performance in both online and offline modes. We use Crouzeix's conjecture to show that acceleration performance is controlled by the solution of a Chebyshev problem on the numerical range of a non-symmetric operator modeling the behavior of iterates near the optimum. Numerical experiments are detailed on logistic regression problems.},
+  paperurl={https://arxiv.org/abs/1810.04539}
+}
 
+
+@inproceedings{azizian2020accelerating,
+  title={Accelerating smooth games by manipulating spectral shapes},
+  author={Azizian, Wa{\"\i}ss and Scieur, Damien and Mitliagkas, Ioannis and Lacoste-Julien, Simon and Gidel, Gauthier},
+  booktitle={International Conference on Artificial Intelligence and Statistics},
+  pages={1705--1715},
+  year={2020},
+  organization={PMLR},
+  abstract={We use matrix iteration theory to characterize acceleration in smooth games. We define the spectral shape of a family of games as the set containing all eigenvalues of the Jacobians of standard gradient dynamics in the family. Shapes restricted to the real line represent well-understood classes of problems, like minimization. Shapes spanning the complex plane capture the added numerical challenges in solving smooth games. In this framework, we describe gradient-based methods, such as extragradient, as transformations on the spectral shape. Using this perspective, we propose an optimal algorithm for bilinear games. For smooth and strongly monotone operators, we identify a continuum between convex minimization, where acceleration is possible using Polyak’s momentum, and the worst case where gradient descent is optimal. Finally, going beyond first-order methods, we propose an accelerated version of consensus optimization.},
+  paperurl={https://arxiv.org/abs/2001.00602},
+}
+
+@inproceedings{jelassi2020extra,
+  title={Extra-gradient with player sampling for faster convergence in n-player games},
+  author={Jelassi, Samy and Domingo-Enrich, Carles and Scieur, Damien and Mensch, Arthur and Bruna, Joan},
+  booktitle={International Conference on Machine Learning},
+  pages={4736--4745},
+  year={2020},
+  organization={PMLR},
+  paperurl={https://arxiv.org/abs/1905.12363},
+  abstract={Data-driven modeling increasingly requires to find a Nash equilibrium in multi-player games, e.g. when training GANs. In this paper, we analyse a new extra-gradient method for Nash equilibrium finding, that performs gradient extrapolations and updates on a random subset of players at each iteration. This approach provably exhibits a better rate of convergence than full extra-gradient for non-smooth convex games with noisy gradient oracle. We propose an additional variance reduction mechanism to obtain speed-ups in smooth convex games. Our approach makes extrapolation amenable to massive multiplayer settings, and brings empirical speed-ups, in particular when using a heuristic cyclic sampling scheme. Most importantly, it allows to train faster and better GANs and mixtures of GANs.},
+}
+
+@inproceedings{domingo2020average,
+  title={Average-case acceleration for bilinear games and normal matrices},
+  author={Domingo-Enrich, Carles and Pedregosa, Fabian and Scieur, Damien},
+  booktitle={International Conference on Learning Representations},
+  year={2020},
+  paperurl={https://arxiv.org/abs/2010.02076},
+  abstract={Advances in generative modeling and adversarial learning have given rise to renewed interest in smooth games. However, the absence of symmetry in the matrix of second derivatives poses challenges that are not present in the classical minimization framework. While a rich theory of average-case analysis has been developed for minimization problems, little is known in the context of smooth games. In this work we take a first step towards closing this gap by developing average-case optimal first-order methods for a subset of smooth games. We make the following three main contributions. First, we show that for zero-sum bilinear games the average-case optimal method is the optimal method for the minimization of the Hamiltonian. Second, we provide an explicit expression for the optimal method corresponding to normal matrices, potentially non-symmetric. Finally, we specialize it to matrices with eigenvalues located in a disk and show a provable speed-up compared to worst-case optimal algorithms. We illustrate our findings through benchmarks with a varying degree of mismatch with our assumptions.},
+}
+
+@inproceedings{kerdreux2021affine,
+  title={Affine invariant analysis of frank-wolfe on strongly convex sets},
+  author={Kerdreux, Thomas and Liu, Lewis and Lacoste-Julien, Simon and Scieur, Damien},
+  booktitle={International Conference on Machine Learning},
+  pages={5398--5408},
+  year={2021},
+  organization={PMLR},
+  paperurl={https://arxiv.org/abs/2011.03351},
+  abstract={It is known that the Frank-Wolfe (FW) algorithm, which is affine-covariant, enjoys accelerated convergence rates when the constraint set is strongly convex. However, these results rely on norm-dependent assumptions, usually incurring non-affine invariant bounds, in contradiction with FW's affine-covariant property. In this work, we introduce new structural assumptions on the problem (such as the directional smoothness) and derive an affine invariant, norm-independent analysis of Frank-Wolfe. Based on our analysis, we propose an affine invariant backtracking line-search. Interestingly, we show that typical backtracking line-searches using smoothness of the objective function surprisingly converge to an affine invariant step size, despite using affine-dependent norms in the step size's computation. This indicates that we do not necessarily need to know the set's structure in advance to enjoy the affine-invariant accelerated rate.},
+}
+
+@inproceedings{scieur2021generalization,
+  title={Generalization of Quasi-Newton methods: application to robust symmetric multisecant updates},
+  author={Scieur, Damien and Liu, Lewis and Pumir, Thomas and Boumal, Nicolas},
+  booktitle={International Conference on Artificial Intelligence and Statistics},
+  pages={550--558},
+  year={2021},
+  organization={PMLR},
+  paperurl={https://arxiv.org/abs/2011.03358},
+  abstract={Quasi-Newton techniques approximate the Newton step by estimating the Hessian using the so-called secant equations. Some of these methods compute the Hessian using several secant equations but produce non-symmetric updates. Other quasi-Newton schemes, such as BFGS, enforce symmetry but cannot satisfy more than one secant equation. We propose a new type of quasi-Newton symmetric update using several secant equations in a least-squares sense. Our approach generalizes and unifies the design of quasi-Newton updates and satisfies provable robustness guarantees.},
+}
+
+@inproceedings{scieur2020universal,
+  title={Universal average-case optimality of polyak momentum},
+  author={Scieur, Damien and Pedregosa, Fabian},
+  booktitle={International conference on machine learning},
+  pages={8565--8572},
+  year={2020},
+  organization={PMLR},
+  paperurl={https://arxiv.org/abs/2002.04664},
+  abstract={Polyak momentum (PM), also known as the heavy-ball method, is a widely used optimization method that enjoys an asymptotic optimal worst-case complexity on quadratic objectives. However, its remarkable empirical success is not fully explained by this optimality, as the worst-case analysis -- contrary to the average-case -- is not representative of the expected complexity of an algorithm. In this work we establish a novel link between PM and the average-case analysis. Our main contribution is to prove that any optimal average-case method converges in the number of iterations to PM, under mild assumptions. This brings a new perspective on this classical method, showing that PM is asymptotically both worst-case and average-case optimal. },
+}
+
+@book{d2021acceleration,
+  title={Acceleration methods},
+  author={d’Aspremont, Alexandre and Scieur, Damien and Taylor, Adrien and others},
+  journal={Foundations and Trends in Optimization},
+  year={2021},
+  publisher={Now Publishers, Inc.},
+  abstract={This monograph covers some recent advances in a range of acceleration techniques frequently used in convex optimization. We first use quadratic optimization problems to introduce two key families of methods, namely momentum and nested optimization schemes. They coincide in the quadratic case to form the Chebyshev method. We discuss momentum methods in detail, starting with the seminal work of Nesterov and structure convergence proofs using a few master templates, such as that for optimized gradient methods, which provide the key benefit of showing how momentum methods optimize convergence guarantees. We further cover proximal acceleration, at the heart of the Catalyst and Accelerated Hybrid Proximal Extragradient frameworks, using similar algorithmic patterns. Common acceleration techniques rely directly on the knowledge of some of the regularity parameters in the problem at hand. We conclude by discussing restart schemes, a set of simple techniques for reaching nearly optimal convergence rates while adapting to unobserved regularity parameters.},
+  paperurl={https://arxiv.org/abs/2101.09545},
+}
+
+@inproceedings{goujaud2022super,
+  title={Super-acceleration with cyclical step-sizes},
+  author={Goujaud, Baptiste and Scieur, Damien and Dieuleveut, Aymeric and Taylor, Adrien B and Pedregosa, Fabian},
+  booktitle={International Conference on Artificial Intelligence and Statistics},
+  pages={3028--3065},
+  year={2022},
+  organization={PMLR},
+  paperurl={https://arxiv.org/abs/2106.09687},
+  abstract={We develop a convergence-rate analysis of momentum with cyclical step-sizes. We show that under some assumption on the spectral gap of Hessians in machine learning, cyclical step-sizes are provably faster than constant step-sizes. More precisely, we develop a convergence rate analysis for quadratic objectives that provides optimal parameters and shows that cyclical learning rates can improve upon traditional lower complexity bounds. We further propose a systematic approach to design optimal first order methods for quadratic minimization with a given spectral structure. Finally, we provide a local convergence rate analysis beyond quadratic minimization for the proposed methods and illustrate our findings through benchmarks on least squares and logistic regression problems.},
+}
+
+@inproceedings{pedregosa2020acceleration,
+  title={Acceleration through spectral density estimation},
+  author={Pedregosa, Fabian and Scieur, Damien},
+  booktitle={International Conference on Machine Learning},
+  pages={7553--7562},
+  year={2020},
+  organization={PMLR},
+  abstract={We develop a framework for the average-case analysis of random quadratic problems and derive algorithms that are optimal under this analysis. This yields a new class of methods that achieve acceleration given a model of the Hessian's eigenvalue distribution. We develop explicit algorithms for the uniform, Marchenko-Pastur, and exponential distributions. These methods are momentum-based algorithms, whose hyper-parameters can be estimated without knowledge of the Hessian's smallest singular value, in contrast with classical accelerated methods like Nesterov acceleration and Polyak momentum. Through empirical benchmarks on quadratic and logistic regression problems, we identify regimes in which the the proposed methods improve over classical (worst-case) accelerated methods.},
+  paperurl={https://arxiv.org/abs/2002.04756},
+}
+
+@article{priol2021convergence,
+  title={Convergence Rates for the MAP of an Exponential Family and Stochastic Mirror Descent--an Open Problem},
+  author={Priol, R{\'e}mi Le and Kunstner, Frederik and Scieur, Damien and Lacoste-Julien, Simon},
+  journal={arXiv preprint arXiv:2111.06826},
+  year={2021},
+  paperurl={https://arxiv.org/abs/2111.06826},
+  abstract={We consider the problem of upper bounding the expected log-likelihood sub-optimality of the maximum likelihood estimate (MLE), or a conjugate maximum a posteriori (MAP) for an exponential family, in a non-asymptotic way. Surprisingly, we found no general solution to this problem in the literature. In particular, current theories do not hold for a Gaussian or in the interesting few samples regime. After exhibiting various facets of the problem, we show we can interpret the MAP as running stochastic mirror descent (SMD) on the log-likelihood. However, modern convergence results do not apply for standard examples of the exponential family, highlighting holes in the convergence literature. We believe solving this very fundamental problem may bring progress to both the statistics and optimization communities.},
+}
+
+@inproceedings{scieur2021connecting,
+  title={Connecting Sphere Manifolds Hierarchically for Regularization},
+  author={Scieur, Damien and Kim, Youngsung},
+  booktitle={International Conference on Machine Learning},
+  pages={9399--9409},
+  year={2021},
+  organization={PMLR},
+  paperurl={https://arxiv.org/abs/2106.13549},
+  abstract={This paper considers classification problems with hierarchically organized classes. We force the classifier (hyperplane) of each class to belong to a sphere manifold, whose center is the classifier of its super-class. Then, individual sphere manifolds are connected based on their hierarchical relations. Our technique replaces the last layer of a neural network by combining a spherical fully-connected layer with a hierarchical layer. This regularization is shown to improve the performance of widely used deep neural network architectures (ResNet and DenseNet) on publicly available datasets (CIFAR100, CUB200, Stanford dogs, Stanford cars, and Tiny-ImageNet).},
+}
+
+@inproceedings{cunha2021only,
+  title={Only tails matter: Average-Case Universality and Robustness in the Convex Regime},
+  author={Cunha, Leonardo and Gidel, Gauthier and Pedregosa, Fabian and Paquette, Courtney and Scieur, Damien},
+  booktitle={International Conference on Machine Learning},
+  organization={PMLR},
+  year={2022},
+  paperurl={https://arxiv.org/abs/2206.09901},
+  abstract={The recently developed average-case analysis of optimization methods allows a more fine-grained and representative convergence analysis than usual worst-case results. In exchange, this analysis requires a more precise hypothesis over the data generating process, namely assuming knowledge of the expected spectral distribution (ESD) of the random matrix associated with the problem. This work shows that the concentration of eigenvalues near the edges of the ESD determines a problem's asymptotic average complexity. This a priori information on this concentration is a more grounded assumption than complete knowledge of the ESD. This approximate concentration is effectively a middle ground between the coarseness of the worst-case scenario convergence and the restrictive previous average-case analysis. We also introduce the Generalized Chebyshev method, asymptotically optimal under a hypothesis on this concentration and globally optimal when the ESD follows a Beta distribution. We compare its performance to classical optimization algorithms, such as gradient descent or Nesterov's scheme, and we show that, in the average-case context, Nesterov's method is universally nearly optimal asymptotically.},
+}
+
+@article{scieur2020regularized,
+  title={Regularized nonlinear acceleration.},
+  author={Scieur, Damien and d'Aspremont, Alexandre and Bach, Francis},
+  journal={Mathematical Programming},
+  volume={179},
+  year={2020},
+  abstract={We describe a convergence acceleration technique for unconstrained optimization problems. Our scheme computes estimates of the optimum from a nonlinear average of the iterates produced by any optimization method. The weights in this average are computed via a simple linear system, whose solution can be updated online. This acceleration scheme runs in parallel to the base algorithm, providing improved estimates of the solution on the fly, while the original optimization method is running. Numerical experiments are detailed on classical classification problems.},
+  paperurl={https://link.springer.com/article/10.1007/s10107-018-1319-8}
+}

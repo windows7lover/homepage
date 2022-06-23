@@ -4,7 +4,7 @@ module Jekyll
 
   module FindBibEntry
 		
-		BanStrings = ["paperpdf","abstract"]
+		BanStrings = ["paperpdf","paperurl","abstract"]
 
 		non_delimiters = /[^(){}\[\]]*/
 		Paired = /\(#{non_delimiters}\)|\{#{non_delimiters}\}|\[#{non_delimiters}\]/
