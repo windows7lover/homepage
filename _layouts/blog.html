@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %} 
+    {% include header_small.html %}
+
+  <body>
+
+    <a href="#demo" data-toggle="collapse">Collapsible</a>
+
+	<div id="demo" class="collapse">
+	Lorem ipsum dolor text....
+	</div>
+	
+	<p><a data-toggle="collapse" href="#footwear" aria-expanded="false" aria-controls="footwear">Heading</a>
+	</p>
+	<div class="collapse" id="footwear">
+	<p>Collapsible content...</p>
+	</div>
+
+    {% include analytics.html %}
+  </body>
+	{% include footer.html %}
+</html>
+
+
+
+

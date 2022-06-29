@@ -1,6 +1,13 @@
 _site/
 .sass-cache/
 .jekyll-metadata
-_config.yml
+.jekyll-cache
+package-lock.json
 *~
 update
+Gemfile.lock
+.bundle/
+node_modules/
+bower_components/
+*.swp
+vendor/

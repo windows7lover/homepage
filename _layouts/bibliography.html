@@ -12,31 +12,24 @@
 
 <div class="marge" id="{{key}}-materials">
   <div class="nav nav-pills"  id="#myContent">
+  
+  
+		<a data-toggle="collapse" data-target="#{{key}}-idBibtex" data-local="#myContent">[Bibtex]</a>&nbsp;
+  
 		{% if entry.abstract %}
-			<a data-toggle="collapse_custom" data-target="#{{key}}-idAbstract" data-local="#myContent">[Abstract]</a>&nbsp;
+			<a data-toggle="collapse" data-target="#{{key}}-idAbstract" data-local="#myContent">[Abstract]</a>&nbsp;
 		{% endif %}
 
-		<a data-toggle="collapse_custom" data-target="#{{key}}-idBibtex" data-local="#myContent">[Bibtex]</a>&nbsp;
 
 
 		{% if entry.paperurl %}
 			<a href="{{entry.paperurl}}" target="_blank">[PDF]</a>&nbsp;
 		{% else %}
 			{% if entry.paperpdf %}
-				<a href="{{ site.url }}/{{site.dir_papers}}/{{entry.paperpdf}}" target="_blank">[PDF]</a>&nbsp;
+			<a href="{{ site.url }}/{{site.dir_papers}}/{{entry.paperpdf}}" target="_blank">[PDF]</a>&nbsp;
 			{% endif %}
 		{% endif %}
 				
-				
-		{% if entry.abstract %}
-
-			<div id="{{key}}-idAbstract" class="collapse" data-local="#myContent">
-                <div class="containerborder">
-                    {{entry.abstract}}
-                </div>
-			</div>
-		{% endif %}
-
 		<div id="{{key}}-idBibtex" class="collapse" data-local="#myContent">
 
 <div markdown="1">
@@ -45,7 +38,18 @@
 {% endhighlight %}
 </div>
 
+		</div>
+				
+		{% if entry.abstract %}
+
+			<div id="{{key}}-idAbstract" class="collapse" data-local="#myContent">
+                <div class="containerborder">
+                {{entry.abstract}}
+                </div>
 			</div>
+		{% endif %}
+
+		
   </div>
 	<p class="vspace_defaut">
 	</p>	
