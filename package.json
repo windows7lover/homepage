@@ -1,5 +1,6 @@
 {
   "dependencies": {
     "sass": "^1.52.3"
+    "bootstrap-sass": "3.3.6"
   }
 }

@@ -15,7 +15,6 @@
   ],
   "dependencies": {
     "jquery": "^3.3.1",
-    "bootstrap-sass": "^3.3.7",
-    "MathJax": "^2.7.3"
+    "bootstrap-sass": "3.3.6"
   }
 }
