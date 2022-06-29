@@ -1,9 +1,10 @@
 ---
 ---
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "_customVariables";
 @import "jekyll-theme-hacker";
 @import "mytheme";
-@import "bootstrap";
 
 ol.bibliography { list-style-type: disc; padding: 0px; margin: 20px 0px 0px 0px; }
