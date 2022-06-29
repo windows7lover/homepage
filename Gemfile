@@ -5,7 +5,7 @@ gemspec
 gem 'jekyll-scholar'
 gem 'sass-embedded'
 gem 'jquery-rails'
-gem 'bootstrap-sass', '3.3.6'
+gem 'bootstrap-sass', '3.4.1'
 gem 'sassc-rails'
 gem 'kramdown'
 gem 'rouge'
