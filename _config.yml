@@ -5,6 +5,7 @@ highlighter: rouge
 sass:
     load_paths:
         - bower_components/bootstrap-sass/assets/stylesheets
+        - bower_components/bootstrap-sass/assets
         - _sass
 google_analytics:
 theme: 
