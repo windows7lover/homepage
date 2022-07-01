@@ -5,8 +5,11 @@
 </style>
 
 <p class="space10px"></p>
-<section id="navbar">
+<section class="topnav" id="myTopnav">
 
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		Menu <i class="fa fa-bars" aria-hidden="true"></i>
+	</a>
     {% assign navigation_pages = site.html_pages | sort: 'nav_position' %}
     {% for p in navigation_pages %}
         {% if p.nav_position != blank %}
@@ -19,3 +22,14 @@
     {% endfor %}
 
 </section>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
