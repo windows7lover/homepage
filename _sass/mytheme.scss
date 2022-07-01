@@ -1,18 +1,19 @@
 /* top navigation */
 .topnav {
-  overflow: hidden;
+  overflow: visible;
+  min-height: 20px;
 }
 
 
 /* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
+.topnav .btn3 {
   display: none;
 }
 
 /* When the screen is less than 600 pixels wide, hide all link. Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 700px) {
   .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
+  .topnav a.btn3 {
     float: left;
     display: block;
   }
