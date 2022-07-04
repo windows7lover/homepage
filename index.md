@@ -6,7 +6,7 @@ nav_position: 1
 
 
 ## Current Position
-I am a research Scientist at Samsung SAIL Montreal, in the MILA, headed by [Simon Lacoste-Julien](http://www.iro.umontreal.ca/~slacoste/). I focus my research on optimization for machine learning, especially accelerated and adaptive methods. I work closely with researchers from Montreal and McGill Universities.
+I am a research Scientist at Samsung SAIL Montreal, at Mila, headed by [Simon Lacoste-Julien](http://www.iro.umontreal.ca/~slacoste/). I focus my research on optimization for machine learning, especially accelerated and adaptive methods. I work closely with researchers from Montreal and McGill Universities.
 
 ---
 
