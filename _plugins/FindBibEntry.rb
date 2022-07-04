@@ -25,6 +25,8 @@ module Jekyll
 	
 	
 	def internalhrefBib(entry, site, path, filename)
+		filename = filename.gsub(" ", "%20")
+		print(filename)
 		newHref = '<b style="font-size:16px"><a href="' + site + '\\' + path + '\\' + filename + '" target="_blank">'
 		
 		entry=entry.gsub('<b>', newHref)
