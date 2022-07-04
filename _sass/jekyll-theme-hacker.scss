@@ -31,10 +31,10 @@ margin-left: 3em;
 }
 
 .container {
-  
   text-align: justify;
   text-justify: inter-word;
-  min-width:850px;    
+  min-width:600px;    
+  max-width:1000px;    
   width: 60%;
   margin: 0 auto;
 }
@@ -318,6 +318,11 @@ hr {
   cursor: pointer; cursor: hand;
 }
 
+
+.btn2:visited {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .btn2active:hover {
   text-decoration: none;
   color: rgba(99, 192, 245, 1);
@@ -414,9 +419,19 @@ hr {
 */
 
 a {
-  color: #63c0f5;
-  text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
+	color: #63c0f5;
 	cursor: pointer; cursor: hand;
+}
+
+
+a:hover {
+	color: #63c0f5;
+	text-shadow: 0 0 10px rgba(104, 182, 255, 1);
+	cursor: pointer; cursor: hand;
+}
+
+a:visited {
+	color: #63c0f5;
 }
 
 

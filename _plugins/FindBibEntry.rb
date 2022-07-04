@@ -16,7 +16,7 @@ module Jekyll
 		end
 		
 	def hrefBib(entry, link)
-		newHref = '<b><a href="' + link + '" target="_blank">'
+		newHref = '<b style="font-size:16px"><a href="' + link + '" target="_blank">'
 		entry=entry.gsub('<b>', newHref)
 		entry=entry.gsub('</b>', '</a></b>')
 		
@@ -25,7 +25,7 @@ module Jekyll
 	
 	
 	def internalhrefBib(entry, site, path, filename)
-		newHref = '<b><a href="' + site + '/' + path + '/' + filename + '" target="_blank">'
+		newHref = '<b style="font-size:16px"><a href="' + site + '\\' + path + '\\' + filename + '" target="_blank">'
 		
 		entry=entry.gsub('<b>', newHref)
 		entry=entry.gsub('</b>', '</a></b>')
