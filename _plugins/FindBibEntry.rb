@@ -26,14 +26,13 @@ module Jekyll
 	
 	def internalhrefBib(entry, site, path, filename)
 		filename = filename.gsub(" ", "%20")
-		newHref = '<b style="font-size:16px"><a href="' + site + '/' + path + '/' + filename + '" target="_blank">'
+		newHref = '<b style="font-size:16px"><a href="' + https://damienscieur.com + '/' + path + '/' + filename + '" target="_blank">' # Hack
 		
 		entry=entry.gsub('<b>', newHref)
 		entry=entry.gsub('</b>', '</a></b>')
 		
 		return entry
 	end
-
 
     def find_bib_entry(filename, key)
 		# search a bib entry based on the key
