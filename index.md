@@ -6,7 +6,7 @@ nav_position: 1
 
 
 ## Current Position
-I am a research Scientist at Samsung SAIL Montreal, at Mila, headed by [Simon Lacoste-Julien](http://www.iro.umontreal.ca/~slacoste/). I focus my research on optimization for machine learning, especially accelerated and adaptive methods. I work closely with researchers from Montreal and McGill Universities.
+I am a Research Scientist at Samsung SAIL Montreal, at Mila, headed by [Simon Lacoste-Julien](http://www.iro.umontreal.ca/~slacoste/), and also an [Adjunct Professor at DIRO](https://diro.umontreal.ca/english/departement-directory/visiting-scholarsadjunct-professors/professor/in/in35916/sg/Damien%20Scieur/). I focus my research on optimization for machine learning, especially accelerated and adaptive methods. I work closely with researchers from Montreal and McGill Universities.
 
 ---
 
@@ -16,6 +16,13 @@ My main research interest is **convex optimization (deterministic or stochastic)
 - *Generic Acceleration Methods and Multisecant Quasi-Newton Methods*,
 - *Algorithms for Variational Inequalities*
 - *Integration Algorithms for ODE* (and their links with optimization).
+
+## Students
+### Current
+- [Lucas Maes](https://lucas-maes.github.io/), Ph.D. Student at Mila and UdeM.
+
+### Alumni
+- [Lewis Liu](https://scholar.google.com/citations?user=rucW2SEAAAAJ&hl=en), Master Student at Mila and UdeM.
 
 ## Prior positions
 
