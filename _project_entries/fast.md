@@ -1,8 +1,8 @@
 ---
 title: FAST Toolbox for Matlab
-website: https://web.stanford.edu/~lcambier/fast/
+website: https://stanford.edu/~lcambier/cgi-bin/fast/index.php
 git: https://github.com/leopoldcambier/FAST
-picture: https://web.stanford.edu/~lcambier/fast/img/FASTneg.png
+picture: https://stanford.edu/~lcambier/cgi-bin/fast/img/FASTneg.png
 ---
 FAST (Finally An SDDP Toolbox) is an easy-to-use Stochastic Dynamic Dual Programming (SDDP) toolbox for Matlab. It helps you to model and solve your problem easily and quickly! The goal of SDDP is to solve large-scale stochastic problems with an algorithm based on the [Cutting plane method](https://en.wikipedia.org/wiki/Cutting-plane_method).   
 Three typical applications of FAST,
