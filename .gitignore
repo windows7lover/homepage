@@ -12,3 +12,6 @@ bower_components/
 *.swp
 vendor/
 Gemfile.lock
+
+# Claude Code local tooling
+.claude/

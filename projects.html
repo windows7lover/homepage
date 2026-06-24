@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Damien Scieur</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Software and research projects by Damien Scieur: stable-worldmodel, DTE, Regularized Nonlinear Acceleration, FAST and JSR toolboxes.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0b0e">
+  <link rel="canonical" href="https://www.damienscieur.com/projects.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects — Damien Scieur">
+  <meta property="og:description" content="Software and research projects by Damien Scieur: stable-worldmodel, DTE, Regularized Nonlinear Acceleration, FAST and JSR toolboxes.">
+  <meta property="og:url" content="https://www.damienscieur.com/projects.html">
+  <meta property="og:image" content="https://www.damienscieur.com/pict/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <p class="brand"><a href="index.html">Damien Scieur</a></p>
+      <nav class="topnav">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="publications.html">Publications</a>
+        <a class="navlink active" href="projects.html">Projects</a>
+        <a class="navlink" href="contact.html">Contact</a>
+        <a class="navlink" href="random.html">Random</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container content">
+    <main>
+      <h1>Projects</h1>
+
+      <div class="card">
+        <h2>stable-worldmodel</h2>
+        <p><code>stable-worldmodel</code> (SWM) is an open-source platform for standardized and
+        reproducible world-modeling research and evaluation. It provides a high-performance data layer,
+        clean and well-tested implementations of modern world-model baselines and planning solvers, and a
+        broad suite of environments and tasks with controllable visual, geometric, and physical factors of
+        variation — so dynamics understanding, control, representation quality, and out-of-distribution
+        generalization can be evaluated systematically under one scalable framework.</p>
+        <p class="pub-links"><a href="https://galilai-group.github.io/stable-worldmodel/">[Website]</a>
+        <a href="https://arxiv.org/abs/2602.08968">[Paper]</a></p>
+      </div>
+
+      <div class="card">
+        <h2>DTE — Dynamic Training Engine</h2>
+        <p>A generic, block-based engine for training neural networks with adaptive and recursive
+        execution, enabling composable training strategies without hard-coding specific algorithms. It
+        ships a Tiny Recursive Model (TRM) baseline as a reference and supports multi-GPU training via
+        PyTorch Distributed Data Parallel (Python 3.10+, Linux).</p>
+        <p class="pub-links"><a href="https://github.com/windows7lover/DTE-DynamicTrainingEngine">[GitHub]</a></p>
+      </div>
+
+      <div class="card">
+        <h2>Regularized Nonlinear Acceleration (RNA)</h2>
+        <p>Reference implementations — in both MATLAB and Python — of the Regularized Nonlinear
+        Acceleration algorithm from my work with d'Aspremont and Bach. RNA is a generic scheme that
+        speeds up optimization methods (e.g. gradient descent) by computing a nonlinear average,
+        an extrapolation, of their iterates via a small linear system.</p>
+        <p class="pub-links"><a href="https://github.com/windows7lover/RegularizedNonlinearAcceleration">[GitHub]</a>
+        <a href="https://arxiv.org/abs/1606.04133">[Paper]</a></p>
+      </div>
+
+      <div class="card">
+        <h2>Book on Acceleration in Optimization</h2>
+        <p>This monograph covers some recent advances in a range of acceleration techniques frequently used
+        in convex optimization. We first use quadratic optimization problems to introduce two key families
+        of methods, namely momentum and nested optimization schemes. They coincide in the quadratic case to
+        form the Chebyshev method.</p>
+        <p>We discuss momentum methods in detail, starting with the seminal work of Nesterov, and structure
+        convergence proofs using a few master templates, such as that for optimized gradient methods. We
+        further cover proximal acceleration, at the heart of the Catalyst and Accelerated Hybrid Proximal
+        Extragradient frameworks. We conclude by discussing restart schemes.</p>
+        <p>Non-exhaustive list of methods covered:</p>
+        <ul>
+          <li>Chebyshev's method and Polyak's momentum (a.k.a. Heavy-ball method)</li>
+          <li>(Regularized) Nonlinear Acceleration</li>
+          <li>Nesterov's scheme and Optimized Gradient Descent</li>
+          <li>Catalyst scheme and Güler / Monteiro-Svaiter acceleration</li>
+          <li>Restart schemes</li>
+        </ul>
+        <p class="pub-links"><a href="https://www.nowpublishers.com/article/Details/OPT-036">[Website]</a>
+        <a href="https://arxiv.org/abs/2101.09545">[arXiv]</a></p>
+      </div>
+
+      <div class="card">
+        <img class="thumb" src="https://stanford.edu/~lcambier/cgi-bin/fast/img/FASTneg.png" alt="FAST toolbox">
+        <h2>FAST Toolbox for Matlab</h2>
+        <p>FAST (Finally An SDDP Toolbox) is an easy-to-use Stochastic Dual Dynamic Programming (SDDP)
+        toolbox for Matlab. It helps you model and solve your problem easily and quickly. The goal of SDDP
+        is to solve large-scale stochastic problems with an algorithm based on the
+        <a href="https://en.wikipedia.org/wiki/Cutting-plane_method">cutting-plane method</a>.</p>
+        <ul>
+          <li><strong>Energy production</strong> — accurate solutions when dealing with uncertain energy supply or demand.</li>
+          <li><strong>Factory production line</strong> — plan production to maximize revenue under unknown demand.</li>
+          <li><strong>Financial products</strong> — deal with random portfolios in the stock exchange business.</li>
+        </ul>
+        <p class="pub-links"><a href="https://stanford.edu/~lcambier/cgi-bin/fast/index.php">[Website]</a>
+        <a href="https://github.com/leopoldcambier/FAST">[Git repository]</a></p>
+      </div>
+
+      <div class="card">
+        <img class="thumb" src="https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/33202/versions/22/screenshot.jpg" alt="JSR toolbox">
+        <h2>JSR Toolbox for Matlab</h2>
+        <p>I partially contributed to the JSR toolbox by implementing a few algorithms. The Joint Spectral
+        Radius of a set of matrices characterizes the maximal asymptotic rate of growth of a product of
+        matrices taken in this set when the length of the product increases. It is known to be very hard to
+        compute, and in recent years many different methods have been proposed to approximate it.</p>
+        <p>These methods have different advantages, depending on the application, the type of matrices, the
+        desired accuracy or running time, etc. This toolbox aims to provide the practitioner with the best
+        available methods and an easy tool for researchers to compare the different algorithms.</p>
+        <p class="pub-links"><a href="http://www.mathworks.com/matlabcentral/fileexchange/33202-the-jsr-toolbox">[Website]</a></p>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p class="footer-links">
+        <a href="pdf/Damien_Scieur_CV.pdf">CV</a> ·
+        <a href="https://scholar.google.com/citations?user=hNscQzgAAAAJ&hl=en">Google Scholar</a> ·
+        <a href="https://www.linkedin.com/in/damien-scieur-6873ba82/">LinkedIn</a> ·
+        <a href="https://github.com/windows7lover">GitHub</a> ·
+        <a href="https://diro.umontreal.ca/english/departement-directory/visiting-scholarsadjunct-professors/professor/in/in35916/sg/Damien%20Scieur/">UdeM (DIRO)</a> ·
+        <a href="https://mila.quebec/en/directory/damien-scieur">Mila</a>
+      </p>
+      <p>&copy; <span class="year-now"></span> Damien Scieur</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

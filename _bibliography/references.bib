@@ -84,7 +84,7 @@ to optimization methods.},
 @inproceedings{Kaneda2018optimal,
     title={Optimal Management of Storage for Offsetting Solar Power Uncertainty using Multistage Stochastic Programming},
     author={Kaneda, Taku  and Losseau, Bruno and Papavasiliou, Anthony and Scieur, Damien and Cambier, Léopold and Henneaux, Pierre and Leemput, Niels},
-    booktitle={Proceedings of 20th Power Systems Computation Conference (to appear)},
+    booktitle={Proceedings of 20th Power Systems Computation Conference},
     year={2018},
     abstract={Africa has recently engaged in implementing an aggressive renewable energy integration plan. A major challenge in the deployment of renewable power is the management of excess energy. The use of battery storage has been considered as a technically attractive solution. This paper tackles this operational problem using stochastic dual dynamical programming. We present an open-source MATLAB toolbox for multistage stochastic programming which employs stochastic dual dynamic programming. We use the toolbox in order to compare the stochastic solution to a greedy policy which operates batteries without future foresight as a benchmark. We consider a case study of storage management in Burkina Faso. We quantify the benefits of the stochastic solution and test the sensitivity of our results to the optimization horizon of the stochastic program.},
 	paperurl={https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8443062}
@@ -93,7 +93,7 @@ to optimization methods.},
 @inproceedings{scieur2016regularized,
   title={Regularized Nonlinear Acceleration},
   author={Scieur, Damien and d'Aspremont, Alexandre and Bach, Francis},
-  booktitle={Advances In Neural Information Processing Systems},
+  booktitle={Advances in Neural Information Processing Systems},
   pages={712--720},
   year={2016},
 	paperurl={https://arxiv.org/abs/1606.04133},
@@ -103,7 +103,7 @@ to optimization methods.},
 @inproceedings{scieur2017integration,
   title={Integration Methods and Accelerated Optimization Algorithms},
   author={Scieur, Damien and Roulet, Vincent and Bach, Francis and d'Aspremont, Alexandre},
-  journal={Advances In Neural Information Processing Systems},
+  booktitle={Advances in Neural Information Processing Systems},
   year={2017},
 	paperpdf={Integration Methods and Accelerated Optimization Algorithms.pdf},	
 	paperurl={https://arxiv.org/abs/1702.06751},
@@ -113,7 +113,7 @@ to optimization methods.},
 @inproceedings{scieur2017nonlinear,
   title={Nonlinear Acceleration of Stochastic Algorithms},
   author={Scieur, Damien and d'Aspremont, Alexandre and Bach, Francis},
-  journal={Advances In Neural Information Processing Systems},
+  booktitle={Advances in Neural Information Processing Systems},
   year={2017},
 	paperpdf={Nonlinear Acceleration of Stochastic Algorithms.pdf},	
 	abstract={Extrapolation methods use the last few iterates of an optimization algorithm to produce a better estimate of the optimum. They were shown to achieve optimal convergence rates in a deterministic setting using simple gradient iterates. Here, we study extrapolation methods in a stochastic setting, where the iterates are produced by either a simple or an accelerated stochastic gradient algorithm. We first derive convergence bounds for arbitrary, potentially biased perturbations, then produce asymptotic bounds using the ratio between the variance of the noise and the accuracy of the current point. Finally, we apply this acceleration technique to stochastic algorithms such as SGD, SAGA, SVRG and Katyusha in different settings, and show significant performance gains.}
@@ -132,7 +132,7 @@ to optimization methods.},
 @article{papavasiliou2017application,
   title={Application of Stochastic Dual Dynamic Programming to the Real-Time Dispatch of Storage under Renewable Supply Uncertainty},
   author={Papavasiliou, Anthony and Mou, Yuting and Cambier, L{\'e}opold and Scieur, Damien},
-  booktitle={IEEE Transactions on Sustainable Energy},
+  journal={IEEE Transactions on Sustainable Energy},
   year={2017},
   publisher={IEEE},
 	paperpdf={Application of Stochastic Dual Dynamic Programming to the Real-Time Dispatch of Storage under Renewable Supply Uncertainty.pdf},
@@ -205,7 +205,7 @@ to optimization methods.},
 @inproceedings{scieur2020universal,
   title={Universal average-case optimality of polyak momentum},
   author={Scieur, Damien and Pedregosa, Fabian},
-  booktitle={International conference on machine learning},
+  booktitle={International Conference on Machine Learning},
   pages={8565--8572},
   year={2020},
   organization={PMLR},
@@ -215,7 +215,7 @@ to optimization methods.},
 
 @book{d2021acceleration,
   title={Acceleration methods},
-  author={d’Aspremont, Alexandre and Scieur, Damien and Taylor, Adrien and others},
+  author={d’Aspremont, Alexandre and Scieur, Damien and Taylor, Adrien},
   journal={Foundations and Trends in Optimization},
   year={2021},
   publisher={Now Publishers, Inc.},
@@ -283,4 +283,121 @@ to optimization methods.},
   year={2020},
   abstract={We describe a convergence acceleration technique for unconstrained optimization problems. Our scheme computes estimates of the optimum from a nonlinear average of the iterates produced by any optimization method. The weights in this average are computed via a simple linear system, whose solution can be updated online. This acceleration scheme runs in parallel to the base algorithm, providing improved estimates of the solution on the fly, while the original optimization method is running. Numerical experiments are detailed on classical classification problems.},
   paperurl={https://link.springer.com/article/10.1007/s10107-018-1319-8}
+}
+
+
+@inproceedings{scieur2022unrolling,
+  abstract={Computing the Jacobian of the solution of an optimization problem is a central problem in machine learning, with applications in hyperparameter optimization, meta-learning, optimization as a layer, and dataset distillation, to name a few. Unrolled differentiation is a popular heuristic that approximates the solution using an iterative solver and differentiates it through the computational path. This work provides a non-asymptotic convergence-rate analysis of this approach on quadratic objectives for gradient descent and the Chebyshev method. We show that to ensure convergence of the Jacobian, we can either 1) choose a large learning rate leading to a fast asymptotic convergence but accept that the algorithm may have an arbitrarily long burn-in phase or 2) choose a smaller learning rate leading to an immediate but slower convergence. We refer to this phenomenon as the curse of unrolling. Finally, we discuss open problems relative to this approach, such as deriving a practical update rule for the optimal unrolling strategy and making novel connections with the field of Sobolev orthogonal polynomials.},
+  title={The Curse of Unrolling: Rate of Differentiating Through Optimization},
+  author={Scieur, Damien and Gidel, Gauthier and Bertrand, Quentin and Pedregosa, Fabian},
+  booktitle={Advances in Neural Information Processing Systems},
+  venuetype={conference},
+  year={2022},
+  paperurl={https://proceedings.neurips.cc/paper_files/paper/2022/hash/6d53193a098b982229340a7c3eb0ecbf-Abstract-Conference.html}
+}
+
+@inproceedings{scieur2024adaptive,
+  abstract={Despite the impressive numerical performance of the quasi-Newton and Anderson/nonlinear acceleration methods, their global convergence rates have remained elusive for over 50 years. This study addresses this long-standing issue by introducing a framework that derives novel, adaptive quasi-Newton and nonlinear/Anderson acceleration schemes. Under mild assumptions, the proposed iterative methods exhibit explicit, non-asymptotic convergence rates that blend those of the gradient descent and Cubic Regularized Newton's methods. The proposed approach also includes an accelerated version for convex functions. Notably, these rates are achieved adaptively without prior knowledge of the function's parameters. The framework presented in this study is generic, and its special cases include algorithms such as Newton's method with random subspaces, finite differences, or lazy Hessian. Numerical experiments demonstrated the efficiency of the proposed framework, even compared to the l-BFGS algorithm with Wolfe line-search.},
+  title={Adaptive Quasi-Newton and Anderson Acceleration Framework with Explicit Global (Accelerated) Convergence Rates},
+  author={Scieur, Damien},
+  booktitle={International Conference on Artificial Intelligence and Statistics},
+  venuetype={conference},
+  year={2024},
+  paperurl={https://proceedings.mlr.press/v238/scieur24a.html}
+}
+
+@inproceedings{zhang2024understanding,
+  title={Understanding Adam Requires Better Rotation Dependent Assumptions},
+  author={Zhang, Tianyue H. and Maes, Lucas and Milligan, Alexandre and Jolicoeur-Martineau, Alexia and Mitliagkas, Ioannis and Scieur, Damien},
+  booktitle={Advances in Neural Information Processing Systems},
+  venuetype={conference},
+  year={2024},
+  abstract={Despite its widespread adoption, Adam's advantage over Stochastic Gradient Descent (SGD) lacks a comprehensive theoretical explanation. This paper investigates Adam's sensitivity to rotations of the parameter space. We observe that Adam's performance in training transformers degrades under random rotations of the parameter space, indicating a crucial sensitivity to the choice of basis in practice. This reveals that conventional rotation-invariant assumptions are insufficient to capture Adam's advantages theoretically. To better understand the rotation-dependent properties that benefit Adam, we also identify structured rotations that preserve or even enhance its empirical performance. We then examine the rotation-dependent assumptions in the literature and find that they fall short in explaining Adam's behaviour across various rotation types. In contrast, we verify the orthogonality of the update as a promising indicator of Adam's basis sensitivity, suggesting it may be the key quantity for developing rotation-dependent theoretical frameworks that better explain its empirical success.},
+  paperurl={https://arxiv.org/abs/2410.19964}
+}
+
+@inproceedings{scieur2026riemannian,
+  abstract={Curvature properties of convex objects, such as strong convexity, are important in designing and analyzing convex optimization algorithms in the Hilbertian or Riemannian settings. In the case of the Hilbertian setting, strongly convex sets are well studied. Herein, we propose various definitions of strong convexity for uniquely geodesic sets in a Riemannian manifold. We study their relationship, propose tools to determine the geodesic strongly convex nature of sets, and analyze the convergence of optimization algorithms over those sets. In particular, we demonstrate that the Riemannian Frank-Wolfe algorithm enjoys a global linear convergence rate when the Riemannian scaling inequalities hold.},
+  title={Strongly Convex Sets in Riemannian Manifolds},
+  author={Scieur, Damien and Mart\'inez-Rubio, David and Kerdreux, Thomas and d'Aspremont, Alexandre and Pokutta, Sebastian},
+  booktitle={International Conference on Learning Representations},
+  venuetype={conference},
+  year={2026},
+  paperurl={https://arxiv.org/abs/2312.03583}
+}
+
+@inproceedings{maes2024relational,
+  title={Relational Representation Learning},
+  author={Maes, Lucas and Hajra, Ian and Batra, Arnesh and Van Assel, Hugues and Scieur, Damien and Balestriero, Randall},
+  booktitle={UniReps: 3rd Edition of the Workshop on Unifying Representations in Neural Networks},
+  venuetype={workshop},
+  year={2024},
+  abstract={We introduce Relational Representation Learning (RRL), a unifying paradigm casting representation learning as a graph estimation problem. Instead of treating samples in isolation, RRL defines learning objectives through a relational graph encoding pairwise relationships between data points. An encoder learns by estimating this graph from embeddings and minimizing its discrepancy with a specified target graph. This perspective reveals that self-, semi-, and supervised learning can all be recovered as special cases of RRL, providing a single formalism that consolidates diverse pretraining objectives into a unified mathematical object. This view offers a principled lens for analyzing empirical observations in self-supervised learning, such as slow convergence, performance, and the projector-backbone accuracy gap. Our experiments show that increasing relational richness within the graph improves convergence speed and downstream performance, while clarifying the role of auxiliary projection heads.},
+  paperurl={https://openreview.net/forum?id=NkbiQOn5SI}
+}
+
+@inproceedings{maes2024levyscore,
+  title={LevyScore: A Fast Sample-Wise Confidence Score of Pretrained Joint Embedding Model},
+  author={Maes, Lucas and Scieur, Damien and Balestriero, Randall},
+  booktitle={UniReps: 3rd Edition of the Workshop on Unifying Representations in Neural Networks},
+  venuetype={workshop},
+  year={2024}
+}
+
+@article{courtois2023sing,
+  abstract={We propose SING (StabIlized and Normalized Gradient), a plug-and-play technique that improves the stability and generalization of the Adam(W) optimizer. SING is straightforward to implement and has minimal computational overhead, requiring only a layer-wise standardization of the gradients fed to Adam(W) without introducing additional hyper-parameters. We support the effectiveness and practicality of the proposed approach by showing improved results on a wide range of architectures, problems (such as image classification, depth estimation, and natural language processing), and in combination with other optimizers. We provide a theoretical analysis of the convergence of the method, and we show that by virtue of the standardization, SING can escape local minima narrower than a threshold that is inversely proportional to the network's depth.},
+  title={SING: A Plug-and-Play DNN Learning Technique},
+  author={Courtois, Adrien and Scieur, Damien and Morel, Jean-Michel and Arias, Pablo and Eboli, Thomas},
+  journal={arXiv preprint arXiv:2305.15997},
+  venuetype={preprint},
+  year={2023},
+  paperurl={https://arxiv.org/abs/2305.15997}
+}
+
+@article{scieur2023riemannianpreprint,
+  title={Strong Convexity of Sets in Riemannian Manifolds},
+  author={Scieur, Damien and Mart\'inez-Rubio, David and Kerdreux, Thomas and d'Aspremont, Alexandre and Pokutta, Sebastian},
+  journal={arXiv preprint arXiv:2312.03583},
+  venuetype={skip},
+  year={2023}
+}
+
+@article{maes2026leworldmodel,
+  abstract={Joint Embedding Predictive Architectures (JEPAs) offer a compelling framework for learning world models in compact latent spaces, yet existing methods remain fragile, relying on complex multi-term losses, exponential moving averages, pre-trained encoders, or auxiliary supervision to avoid representation collapse. In this work, we introduce LeWorldModel (LeWM), the first JEPA that trains stably end-to-end from raw pixels using only two loss terms: a next-embedding prediction loss and a regularizer enforcing Gaussian-distributed latent embeddings. This reduces tunable loss hyperparameters from six to one compared to the only existing end-to-end alternative. With ~15M parameters trainable on a single GPU in a few hours, LeWM plans up to 48x faster than foundation-model-based world models while remaining competitive across diverse 2D and 3D control tasks. Beyond control, we show that LeWM's latent space encodes meaningful physical structure through probing of physical quantities. Surprise evaluation confirms that the model reliably detects physically implausible events.},
+  title={LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels},
+  author={Maes, Lucas and Le Lidec, Quentin and Scieur, Damien and LeCun, Yann and Balestriero, Randall},
+  journal={arXiv preprint arXiv:2603.19312},
+  venuetype={preprint},
+  year={2026},
+  paperurl={https://arxiv.org/abs/2603.19312}
+}
+
+@article{maes2026stablev1,
+  abstract={World Models have emerged as a powerful paradigm for learning compact, predictive representations of environment dynamics, enabling agents to reason, plan, and generalize beyond direct experience. Despite recent interest in World Models, most available implementations remain publication-specific, severely limiting their reusability, increasing the risk of bugs, and reducing evaluation standardization. To mitigate these issues, we introduce stable-worldmodel (SWM), a modular, tested, and documented world-model research ecosystem that provides efficient data-collection tools, standardized environments, planning algorithms, and baseline implementations. In addition, each environment in SWM enables controllable factors of variation, including visual and physical properties, to support robustness and continual learning research. Finally, we demonstrate the utility of SWM by using it to study zero-shot robustness in DINO-WM.},
+  title={stable-worldmodel-v1: Reproducible World Modeling Research and Evaluation},
+  author={Maes, Lucas and Le Lidec, Quentin and Haramati, Daniel and Massaudi, Nahaad and Scieur, Damien and LeCun, Yann},
+  journal={arXiv preprint arXiv:2602.08968},
+  venuetype={preprint},
+  year={2026},
+  paperurl={https://arxiv.org/abs/2602.08968}
+}
+
+@article{maes2026stableplatform,
+  abstract={World models are central to building agents that can reason, plan, and generalize beyond their training data. However, research on world models is currently fragmented, with disparate codebases, data pipelines, and evaluation protocols hindering reproducibility and fair comparison. Current practice is further limited by three key bottlenecks: fragile one-off codebases, slow video data loading, and the lack of standardized generalization benchmarks. We present stable-worldmodel (swm), an open-source platform for standardized and reproducible world modeling research and evaluation. It delivers (1) a high-performance Lance-based data layer with native support and conversion tools for MP4, HDF5, and LeRobot datasets, (2) clean, well-tested implementations of modern world model baselines and planning solvers, and (3) a broad suite of environments and tasks extended with controllable visual, geometric, and physical factors of variation for systematic in-silico evaluation of dynamics understanding, control performance, representation quality, and out-of-distribution generalization. By unifying the full pipeline under a single, scalable framework, swm dramatically reduces research overhead and accelerates trustworthy progress toward reliable world models.},
+  title={stable-worldmodel: A Platform for Reproducible World Modeling Research and Evaluation},
+  author={Maes, Lucas and Le Lidec, Quentin and Facury, Lucas and Massaudi, Nahaad and Chaurasia, Aryan and Capuano, Francesco and Scieur, Damien},
+  journal={arXiv preprint arXiv:2605.21800},
+  venuetype={preprint},
+  year={2026},
+  paperurl={https://arxiv.org/abs/2605.21800}
+}
+
+@article{dufort2026potholes,
+  abstract={Sharpness-aware minimization (SAM) encourages flat minima by perturbing parameters along directions of high loss curvature, but treats all parameter directions uniformly, ignoring the underlying loss geometry. We introduce LLQR+SAM, which combines SAM with a learned preconditioner obtained from the recently proposed LLQR framework, a second-order method that recasts steepest descent as a layerwise linear-quadratic regulator problem. The preconditioner is updated sparsely and maintained as a slow exponential moving average, so it captures a smoothed, low-resolution picture of the loss landscape geometry. The SAM perturbation then operates on top of this learned geometry, probing curvature at a faster timescale. We show that this two-timescale structure is not merely a computational convenience: theoretically, the preconditioner amplifies the SAM escape signal in directions that are flat under the average geometry but locally sharp (potholes). Wide, flat basins, by contrast, remain stable. Empirically, LLQR+SAM gives consistent gains over both SAM and LLQR alone across standard vision and sequence modeling benchmarks, supporting the view that slow learned geometry and fast sharpness correction are genuinely complementary.},
+  title={Navigating Potholes with Geometry-Aware Sharpness Minimization},
+  author={Dufort-Labb\'e, Simon and Hamidi, Mohammadreza and Pascanu, Razvan and Mitliagkas, Ioannis and Scieur, Damien and Baratin, Aristide},
+  journal={arXiv preprint arXiv:2605.16134},
+  venuetype={preprint},
+  year={2026},
+  paperurl={https://arxiv.org/abs/2605.16134}
 }

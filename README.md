@@ -1,15 +1,59 @@
-# Damien Scieur's homepage
+# Damien Scieur — homepage
 
-Welcome! You are free to use any piece of code present in this repo :-).
+Source for [damienscieur.com](https://damienscieur.com/). A hand-written **static
+site** (HTML/CSS/JS) — no framework, no build system, no Jekyll. GitHub Pages
+serves the files as-is (`.nojekyll` is present, `CNAME` sets the custom domain).
 
-The link is: [www.damienscieur.com](https://www.damienscieur.com/).
+## Structure
 
-To make this website, I used
-- [Jekyll](https://jekyllrb.com/), a static website generator (really, this is [awesome](http://www.urbandictionary.com/define.php?term=Awesomen)).
-- [Bootstrap 3](https://github.com/twbs/bootstrap-sass/tags), version 3.3.7.
-- [This theme](https://github.com/pages-themes/hacker), a bit modified.
-- [Jekyll-scholar](https://github.com/inukshuk/jekyll-scholar), for the references.
+```
+index.html  publications.html  projects.html  contact.html  random.html
+404.html  robots.txt  sitemap.xml  favicon.svg  CNAME  .nojekyll
+css/style.css            single dark "terminal/sidebar" theme
+js/main.js               nav section submenu + scrollspy, mailto, footer year
+js/publications.js       renders the publications list (search, compact, BibTeX)
+data/publications.json   generated — do not edit by hand
+_bibliography/references.bib   the source of truth for publications
+scripts/bib2json.py      references.bib -> data/publications.json (+ no-JS fallback)
+pdf/   pict/   assets/images/
+```
 
-I would like to say thank to 
-- The guy who wrote [this tutorial](https://www.sitepoint.com/bootstrap-sass-installation-and-customisation/) for using Bootstrap 3 with Jekyll. Rly, u rox.
-- [This Stackoverflow post](http://stackoverflow.com/questions/15917463/embedding-markdown-in-jekyll-html), which explains how to use embeded markdown in html.
+## Adding or editing a publication
+
+1. Edit `_bibliography/references.bib` (standard BibTeX). Useful custom fields:
+   - `abstract={...}` — shown behind the **Abstract** toggle.
+   - `paperurl={...}` — external link (arXiv, proceedings, etc.).
+   - `paperpdf={file.pdf}` — a local PDF in `pdf/papers/`.
+   - `venuetype={book|journal|conference|workshop|thesis|preprint|skip}` —
+     overrides automatic categorization. `skip` drops the entry (used to merge a
+     preprint into its published version).
+   - Only entries whose `author` contains "Scieur" are included.
+2. Regenerate:
+   ```sh
+   python scripts/bib2json.py
+   ```
+   This rewrites `data/publications.json`, the per-entry BibTeX used by the
+   "Cite" button, and the no-JS `<noscript>` fallback list inside
+   `publications.html`.
+3. Commit `references.bib`, `data/publications.json`, and `publications.html`.
+
+## Editing projects / pages
+
+Projects, the bio, News, and Contact are plain HTML — edit the relevant
+`*.html` file directly. The header nav and footer are duplicated across pages;
+update each when changing navigation.
+
+## Run locally
+
+A static server is needed (the publications list is fetched, so `file://`
+won't work):
+
+```sh
+python -m http.server 8000
+# then open http://localhost:8000
+```
+
+## Deployment
+
+GitHub Pages, "Deploy from branch" (root). `.nojekyll` disables Jekyll;
+`CNAME` points the site at `damienscieur.com`.
