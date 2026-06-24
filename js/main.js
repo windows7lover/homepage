@@ -67,6 +67,17 @@ function buildEmailLinks() {
   });
 }
 
+// Open external links and files (PDFs) in a new tab; keep internal nav in place.
+function externalLinksNewTab() {
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var href = a.getAttribute('href');
+    if (!href || href.charAt(0) === '#' || /^(mailto|tel):/i.test(href)) return;
+    var external = /^https?:\/\//i.test(href) && a.hostname !== location.hostname;
+    var isFile = /\.pdf($|[?#])/i.test(href);
+    if (external || isFile) { a.target = '_blank'; a.rel = 'noopener'; }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('code.random').forEach(function (el) {
     el.textContent = '>> ' + Math.floor(Math.random() * 100);
@@ -76,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   buildSectionSubnav();
   buildEmailLinks();
+  externalLinksNewTab();
 });
 
 // Pages that inject content asynchronously (e.g. publications) fire this
