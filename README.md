@@ -40,8 +40,15 @@ pdf/   pict/   assets/images/
 ## Editing projects / pages
 
 Projects, the bio, News, and Contact are plain HTML — edit the relevant
-`*.html` file directly. The header nav and footer are duplicated across pages;
-update each when changing navigation.
+`*.html` file directly.
+
+The **header nav and footer are shared** (single source in `_partials/`).
+Edit `_partials/header.html` or `_partials/footer.html`, then re-sync every
+page — the active nav item is set automatically:
+
+```sh
+python scripts/build_pages.py
+```
 
 ## Updating CSS / JS (cache busting)
 
