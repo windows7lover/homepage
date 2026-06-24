@@ -43,6 +43,18 @@ Projects, the bio, News, and Contact are plain HTML — edit the relevant
 `*.html` file directly. The header nav and footer are duplicated across pages;
 update each when changing navigation.
 
+## Updating CSS / JS (cache busting)
+
+GitHub Pages and browsers cache `style.css` / the JS for ~10 min, so after
+changing them, stamp a fresh version query so visitors get the new files
+immediately instead of a stale cached copy:
+
+```sh
+python scripts/bump_version.py   # rewrites ?v=<timestamp> on css/js links
+```
+
+Commit the changed `*.html` along with your CSS/JS edit.
+
 ## Run locally
 
 A static server is needed (the publications list is fetched, so `file://`
